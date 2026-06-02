@@ -38,7 +38,10 @@ const toggleSearchBar = () => {
 
 menuToggle.addEventListener('click', (event) => {
   event.stopPropagation();
-  toggleMobileNav();
+
+  if (window.innerWidth <= 1013) {
+    toggleMobileNav();
+  }
 });
 
 mobileNavLinks.forEach((link) => {
@@ -48,7 +51,7 @@ mobileNavLinks.forEach((link) => {
 });
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth > 860) {
+  if (window.innerWidth <= 1013) {
     closeMobileNav();
   }
 });

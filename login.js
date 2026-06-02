@@ -1,41 +1,81 @@
 const form = document.getElementById("loginForm");
-        const errorMsg = document.getElementById("errorMsg");
-        const togglePassword = document.getElementById("togglePassword");
-        const passwordInput = document.getElementById("password");
+const errorMsg = document.getElementById("errorMsg");
+const togglePassword = document.getElementById("togglePassword");
+const passwordInput = document.getElementById("password");
+const emailInput = document.getElementById("email");
 
-        // Form submission & validation handler
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
+// Load saved email when page opens
+window.addEventListener("DOMContentLoaded", () => {
+    const savedEmail = localStorage.getItem("userEmail");
 
-            const role = document.getElementById("role").value;
-            const email = document.getElementById("email").value.trim();
-            const password = passwordInput.value.trim();
+    if (savedEmail) {
+        emailInput.value = savedEmail;
+    }
+});
 
-            // Strict Email Validation Regex
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                errorMsg.textContent = "Please enter a valid email address end with .com, .in";
-                return;
-            }
+// Show / Hide Password
+if (togglePassword) {
+    togglePassword.addEventListener("click", () => {
+        const type =
+            passwordInput.getAttribute("type") === "password"
+                ? "text"
+                : "password";
 
-            // Password length validation
-            if (password.length < 6) {
-                errorMsg.textContent = "Password must be at least 6 characters long.";
-                return;
-            }
+        passwordInput.setAttribute("type", type);
 
-            if (role === "") {
-                errorMsg.textContent = "Please select a role.";
-                return;
-            }
+        togglePassword.innerHTML =
+            type === "password"
+                ? '<i class="fa-solid fa-eye"></i>'
+                : '<i class="fa-solid fa-eye-slash"></i>';
+    });
+}
 
-            errorMsg.textContent = "";
+// Form Submission
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-            // Role-based routing simulation
-            if (role === "admin") {
-                window.location.href = "admin.html"; 
-            } else if (role === "user") {
-                window.location.href = "user.html";  
-            }
-        });
-            
+    const role = document.getElementById("role").value;
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    // Email Validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.(com|in)$/i;
+
+    if (!emailPattern.test(email)) {
+        errorMsg.textContent =
+            "Please enter a valid email address ending with .com or .in";
+        return;
+    }
+
+    // Password Validation
+    if (password.length < 6) {
+        errorMsg.textContent =
+            "Password must be at least 6 characters long.";
+        return;
+    }
+
+    // Role Validation
+    if (role === "") {
+        errorMsg.textContent = "Please select a role.";
+        return;
+    }
+
+    errorMsg.textContent = "";
+
+    // Store User Data
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userRole", role);
+
+    // Optional Login Timestamp
+    localStorage.setItem("loginTime", new Date().toLocaleString());
+
+    // Redirect Based on Role
+    if (role === "admin") {
+        window.location.href = "admin.html";
+    } else if (role === "user") {
+        window.location.href = "user.html";
+    }
+});
+
+// Save email only
+localStorage.setItem("userEmail", email);

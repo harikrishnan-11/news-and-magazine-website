@@ -1,103 +1,1101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly - User Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Source Sans 3', sans-serif; background: #fafafa; color: #222; }
-        
-        /* Navigation Header Bar */
-        .navbar { background: #fff; border-bottom: 1px solid #eaeaea; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
-        .navbar .logo h1 { font-size: 1.6rem; color: #1a1a2e; font-weight: bold; }
-        .navbar .logo span { color: #d71920; }
-        .user-menu { display: flex; align-items: center; gap: 20px; }
-        .user-menu a { color: #666; text-decoration: none; font-weight: 600; font-size: 0.95rem;}
-        .user-menu a:hover { color: #d71920; }
-        .logout-btn { padding: 8px 16px; background: #1a1a2e; color: #fff !important; border-radius: 6px; }
-        .logout-btn:hover { background: #d71920 !important; }
-
-        /* Layout Structure */
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .welcome-hero { margin-bottom: 30px; }
-        .welcome-hero h2 { font-size: 2rem; margin-bottom: 5px; }
-        .welcome-hero p { color: #666; }
-
-        /* News Aggregator Feed Card Grid */
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .news-card { background: #fff; border-radius: 12px; border: 1px solid #eee; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; }
-        .news-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.06); }
-        .news-img-placeholder { height: 180px; background: #e9ecef; display: flex; align-items: center; justify-content: center; color: #aaa; font-weight: bold; font-size: 1.1rem;}
-        .news-content { padding: 20px; }
-        .news-tag { display: inline-block; background: rgba(215, 25, 32, 0.1); color: #d71920; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 12px; text-transform: uppercase; }
-        .news-content h3 { font-size: 1.25rem; margin-bottom: 10px; line-height: 1.4; color: #1a1a2e; }
-        .news-content p { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
-        .read-more { color: #d71920; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 600px) {
-            .navbar { padding: 15px; }
-            .user-menu { gap: 12px; }
-            .user-menu a { font-size: 0.85rem; }
-            .container { margin: 20px auto; }
-            .welcome-hero h2 { font-size: 1.6rem; }
-        }
-    </style>
+    <title>Stackly — Admin Dashboard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="admin.css">
+    
 </head>
+
 <body>
 
-    <header class="navbar">
-        <div class="logo"><h1>STACKLY<span>FEED</span></h1></div>
-        <div class="user-menu">
-            <a href="#">My Saved</a>
-            <a href="#">Preferences</a>
-            <a href="login.html" class="logout-btn">Log Out</a>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-inner">
+            <div class="brand">
+                <div class="brand-logo">STACK<span>LY</span></div>
+                <div class="brand-tag">Admin Panel</div>
+            </div>
+
+            <div class="nav-section">
+    <div class="nav-label">My Account</div>
+
+    <a class="nav-item active" href="#" onclick="setPage('overview',this)">
+        <i class="ti ti-layout-dashboard"></i> Dashboard
+    </a>
+
+    <a class="nav-item" href="#" onclick="setPage('profile',this)">
+        <i class="ti ti-user"></i> My Profile
+    </a>
+
+    <a class="nav-item" href="#" onclick="setPage('bookmarks',this)">
+        <i class="ti ti-bookmark"></i> Saved Articles
+        <span class="nav-badge">24</span>
+    </a>
+
+    <a class="nav-item" href="#" onclick="setPage('history',this)">
+        <i class="ti ti-history"></i> Reading History
+    </a>
+</div>
+
+<div class="nav-section">
+    <div class="nav-label">News</div>
+
+    <a class="nav-item" href="#" onclick="setPage('recommended',this)">
+        <i class="ti ti-stars"></i> Recommended
+    </a>
+
+    <a class="nav-item" href="#" onclick="setPage('trending',this)">
+        <i class="ti ti-trending-up"></i> Trending News
+    </a>
+
+    <a class="nav-item" href="#" onclick="setPage('newsletter',this)">
+        <i class="ti ti-mail"></i> Newsletter
+    </a>
+</div>
+
+<div class="nav-section">
+    <div class="nav-label">Settings</div>
+
+    <a class="nav-item" href="#" onclick="setPage('settings',this)">
+        <i class="ti ti-settings"></i> Account Settings
+    </a>
+
+    <a class="nav-item" href="#" onclick="setPage('security',this)">
+        <i class="ti ti-shield-lock"></i> Security
+    </a>
+</div>
+
+            
         </div>
-    </header>
+    </aside>
 
-    <main class="container">
-        <div class="welcome-hero">
-            <h2>Good Morning, Reader!</h2>
-            <p>Here is your personalized curation of daily updates based on your interests.</p>
-        </div>
-
-        <div class="news-grid">
-            <!-- Article Card 1 -->
-            <article class="news-card">
-                <div class="news-img-placeholder" style="background: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500') center/cover;">Technology</div>
-                <div class="news-content">
-                    <span class="news-tag">Technology</span>
-                    <h3>Next-Gen Cybersecurity Solutions to Look Out For in 2026</h3>
-                    <p>As remote systems shift fully toward dynamic mesh environments, threat mitigation turns heavily reliance on contextual identity engines.</p>
-                    <a href="#" class="read-more">Read Full Story &rarr;</a>
+    <!-- ===================== MAIN ===================== -->
+    <div class="main">
+        <header class="topbar">
+            <button class="hamburger" id="hamBtn" aria-label="Toggle menu">
+                <i class="ti ti-menu-2"></i>
+            </button>
+            <span class="page-title" id="pageTitle">User Dashboard</span>
+            <div class="topbar-spacer"></div>
+            <div class="search-box">
+                <i >USER:</i>
+                <P>EMAIL@DOMAIN.COM </P>
+            </div>
+            <div class="topbar-actions">
+                <button class="icon-btn" title="Notifications">
+                    <i class="ti ti-bell"></i>
+                    <span class="notif-dot"></span>
+                </button>
+                <button class="icon-btn" title="Messages">
+                    <i class="ti ti-message"></i>
+                </button>
+                <button class="icon-btn" title="Help">
+                    <i class="ti ti-help-circle"></i>
+                </button>
+                <div class="logout">
+                    <button class="icon-btn logout-btn" title="Logout" onclick="location.href='login.html'">
+                        <i class="ti ti-logout"></i>
+                    </button>
                 </div>
-            </article>
+            </div>
+        </header>
 
-            <!-- Article Card 2 -->
-            <article class="news-card">
-                <div class="news-img-placeholder" style="background: url('https://images.unsplash.com/photo-1444653389962-8149286c578a?w=500') center/cover;">Business</div>
-                <div class="news-content">
-                    <span class="news-tag">Finance</span>
-                    <h3>Global Supply Networks Shift Operations Centers Strategy</h3>
-                    <p>Economic analysts map how rapid shifts toward automated near-shore manufacturing is impacting ocean freight pipelines this fiscal year.</p>
-                    <a href="#" class="read-more">Read Full Story &rarr;</a>
+        <div class="content" id="contentArea">
+            <!-- OVERVIEW PAGE -->
+            <div id="page-overview">
+
+                <!-- STAT CARDS -->
+                <div class="stats-row">
+                    <div class="stat-card fade-up delay-1">
+                        <div class="stat-icon" style="background:#fff0f0;color:#cc0000;"><i class="ti ti-article"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Articles Read</div>
+<div class="stat-value">248</div>
+<div class="stat-delta up">+12 this week</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-2">
+                        <div class="stat-icon" style="background:#f0fdf4;color:#16a34a;"><i class="ti ti-users"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Saved Articles</div>
+<div class="stat-value">24</div>
+<div class="stat-delta up">+3 today</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-3">
+                        <div class="stat-icon" style="background:#eff6ff;color:#1d4ed8;"><i class="ti ti-eye"></i></div>
+                        <div class="stat-body">
+                            <div class="stat-label">Reading Time</div>
+<div class="stat-value">42h</div>
+<div class="stat-delta up">+5h this month</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-4">
+                        <div class="stat-icon" style="background:#fff7ed;color:#ea580c;"><i class="ti ti-clock"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Comments Posted</div>
+<div class="stat-value">87</div>
+<div class="stat-delta up">+4 today</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-5">
+                        <div class="stat-icon" style="background:#fdf4ff;color:#9333ea;"><i class="ti ti-tags"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Newsletter Subscriptions</div>
+<div class="stat-value">6</div>
+<div class="stat-delta up">Active</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-6">
+                        <div class="stat-icon" style="background:#fff0f0;color:#dc2626;"><i class="ti ti-bolt"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Achievements</div>
+<div class="stat-value">15</div>
+<div class="stat-delta up">Unlocked</div>
+                        </div>
+                    </div>
                 </div>
-            </article>
 
-            <!-- Article Card 3 -->
-            <article class="news-card">
-                <div class="news-img-placeholder" style="background: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500') center/cover;">Lifestyle</div>
-                <div class="news-content">
-                    <span class="news-tag">Culture</span>
-                    <h3>The Creative Resurgence of Micro-Journaling Communities</h3>
-                    <p>Why digital exhaustion is sending millions of users away from massive timelines and toward miniature independent publishing clubs.</p>
-                    <a href="#" class="read-more">Read Full Story &rarr;</a>
+                <!-- CHARTS ROW -->
+                <div class="grid-2 fade-up delay-2">
+                    <div class="panel">
+                        <div class="panel-head">
+                            <span class="panel-title">Your Reading Activity — Last 7 Days</span>
+                            <a class="panel-action" href="#">View report <i class="ti ti-arrow-right"></i></a>
+                        </div>
+                        <div class="panel-body">
+                            <div class="chart-container" style="height:220px;">
+                                <canvas id="trafficChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head">
+                            <span class="panel-title">Reading Interests</span>
+                            <a class="panel-action" href="#">Details <i class="ti ti-arrow-right"></i></a>
+                        </div>
+                        <div class="panel-body">
+                            <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+                                <div class="chart-container" style="width:140px;height:140px;flex-shrink:0;">
+                                    <canvas id="donutChart"></canvas>
+                                </div>
+                                <div class="donut-stats" style="flex:1;min-width:120px;">
+                                    <div class="donut-stat">
+                                        <div class="donut-dot" style="background:#cc0000;"></div>
+                                        <div class="donut-label">Technology</div>
+                                        <div class="donut-val">38%</div>
+                                    </div>
+                                    <div class="donut-stat">
+                                        <div class="donut-dot" style="background:#1d4ed8;"></div>
+                                        <div class="donut-label">Politics</div>
+                                        <div class="donut-val">24%</div>
+                                    </div>
+                                    <div class="donut-stat">
+                                        <div class="donut-dot" style="background:#16a34a;"></div>
+                                        <div class="donut-label">Business</div>
+                                        <div class="donut-val">18%</div>
+                                    </div>
+                                    <div class="donut-stat">
+                                        <div class="donut-dot" style="background:#9333ea;"></div>
+                                        <div class="donut-label">Science</div>
+                                        <div class="donut-val">12%</div>
+                                    </div>
+                                    <div class="donut-stat">
+                                        <div class="donut-dot" style="background:#f59e0b;"></div>
+                                        <div class="donut-label">Others</div>
+                                        <div class="donut-val">8%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </article>
-        </div>
-    </main>
 
+                <!-- ARTICLES + ACTIVITY -->
+                <div class="grid-3 fade-up delay-3">
+                    <div class="panel">
+                        <div class="panel-head">
+                            <span class="panel-title">Recently Read Articles</span>
+                            <a class="panel-action" href="#">Manage <i class="ti ti-arrow-right"></i></a>
+                        </div>
+                        <div class="tbl-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Headline</th>
+                                        <th>Author</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Global Tech Summit 2026 Announced</td>
+                                        <td>Sarah Jenkins</td>
+                                        <td>Jun 02, 2026</td>
+                                        <td><span class="badge badge-success">Published</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>The Rising Trends of Decentralized AI</td>
+                                        <td>Alex Rivera</td>
+                                        <td>Jun 01, 2026</td>
+                                        <td><span class="badge badge-success">Published</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Climate Crisis: A Look at Green Energy</td>
+                                        <td>David K.</td>
+                                        <td>May 30, 2026</td>
+                                        <td><span class="badge badge-warning">Draft</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Global Markets Surge After Fed Pause</td>
+                                        <td>Priya Nair</td>
+                                        <td>May 29, 2026</td>
+                                        <td><span class="badge badge-info">Review</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SpaceX Starship Completes 5th Test</td>
+                                        <td>Tom Walsh</td>
+                                        <td>May 28, 2026</td>
+                                        <td><span class="badge badge-success">Published</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-head">
+                            <span class="panel-title">Recent Activity</span>
+                        </div>
+                        <div class="panel-body" style="padding:12px 16px;">
+                            <ul class="activity-list">
+                                <li class="activity-item">
+                                    <div class="activity-dot" style="background:#fee2e2;color:#cc0000;"><i
+                                            class="ti ti-article"></i></div>
+                                    <div class="activity-text">
+                                        <div class="activity-msg">Read "AI Revolution in 2026"</div>
+                                        <div class="activity-time">Sarah Jenkins · 2 min ago</div>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-dot" style="background:#dcfce7;color:#16a34a;"><i
+                                            class="ti ti-user-plus"></i></div>
+                                    <div class="activity-text">
+                                        <div class="activity-msg">Saved "Global Markets Weekly Report"</div>
+                                        <div class="activity-time">Today · 8:14 AM</div>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-dot" style="background:#dbeafe;color:#1d4ed8;"><i
+                                            class="ti ti-send"></i></div>
+                                    <div class="activity-text">
+                                        <div class="activity-msg">Read "Market Trends in 2026"</div>
+                                        <div class="activity-time">Today · 7:00 AM</div>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-dot" style="background:#fef3c7;color:#d97706;"><i
+                                            class="ti ti-bolt"></i></div>
+                                    <div class="activity-text">
+                                        <div class="activity-msg">Liked "Tech Startup Trends"</div>
+                                        <div class="activity-time">Yesterday · 11:45 PM</div>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-dot" style="background:#f0fdf4;color:#15803d;"><i
+                                            class="ti ti-shield-check"></i></div>
+                                    <div class="activity-text">
+                                        <div class="activity-msg">Subscribed to Weekly Newsletter</div>
+                                        <div class="activity-time">Yesterday · 10:30 PM</div>
+                                    </div>
+                                </li>
+                                <li class="activity-item">
+                                    <div class="activity-dot" style="background:#fdf4ff;color:#9333ea;"><i
+                                            class="ti ti-message-dots"></i></div>
+                                    <div class="activity-text">
+                                        <div class="activity-msg">Commented on "Future of Space Exploration"</div>
+                                        <div class="activity-time">Yesterday · 9:00 PM</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QUICK ACTIONS + COMMENTS + Your Favorite Categories -->
+                <div class="grid-2 fade-up delay-4">
+                    <div style="display:flex;flex-direction:column;gap:20px;">
+                        <div class="panel">
+                            <div class="panel-head"><span class="panel-title">Quick Actions</span></div>
+                            <div class="panel-body">
+                                <div class="qa-grid">
+                                    <button class="qa-btn">
+    <i class="ti ti-bookmark"></i>
+    Saved Articles
+</button>
+
+<button class="qa-btn">
+    <i class="ti ti-history"></i>
+    Reading History
+</button>
+
+<button class="qa-btn">
+    <i class="ti ti-mail"></i>
+    Newsletter
+</button>
+
+<button class="qa-btn">
+    <i class="ti ti-user"></i>
+    Edit Profile
+</button>
+
+<button class="qa-btn">
+    <i class="ti ti-heart"></i>
+    Favorites
+</button>
+
+<button class="qa-btn">
+    <i class="ti ti-settings"></i>
+    Settings
+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-head">
+                                <span class="panel-title">Your Favorite Categories</span>
+                                <a class="panel-action" href="#">All <i class="ti ti-arrow-right"></i></a>
+                            </div>
+                            <div class="panel-body">
+                                <div class="prog-row">
+                                    <div class="prog-head"><span class="prog-name">Technology</span><span
+                                            class="prog-pct">90%</span></div>
+                                    <div class="prog-bar">
+                                        <div class="prog-fill" style="width:0%;background:#cc0000;" data-w="90"></div>
+                                    </div>
+                                </div>
+                                <div class="prog-row">
+                                    <div class="prog-head"><span class="prog-name">Politics</span><span
+                                            class="prog-pct">75%</span></div>
+                                    <div class="prog-bar">
+                                        <div class="prog-fill" style="width:0%;background:#1d4ed8;" data-w="75"></div>
+                                    </div>
+                                </div>
+                                <div class="prog-row">
+                                    <div class="prog-head"><span class="prog-name">Business</span><span
+                                            class="prog-pct">65%</span></div>
+                                    <div class="prog-bar">
+                                        <div class="prog-fill" style="width:0%;background:#16a34a;" data-w="65"></div>
+                                    </div>
+                                </div>
+                                <div class="prog-row">
+                                    <div class="prog-head"><span class="prog-name">Science</span><span
+                                            class="prog-pct">52%</span></div>
+                                    <div class="prog-bar">
+                                        <div class="prog-fill" style="width:0%;background:#9333ea;" data-w="52"></div>
+                                    </div>
+                                </div>
+                                <div class="prog-row" style="margin-bottom:0;">
+                                    <div class="prog-head"><span class="prog-name">Sports</span><span
+                                            class="prog-pct">41%</span></div>
+                                    <div class="prog-bar">
+                                        <div class="prog-fill" style="width:0%;background:#f59e0b;" data-w="41"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;flex-direction:column;gap:20px;">
+                        <div class="panel">
+                            <div class="panel-head">
+                                <span class="panel-title">My Recent Comments</span>
+                                <a class="panel-action" href="#">View all <i class="ti ti-arrow-right"></i></a>
+                            </div>
+                            <div class="panel-body" style="padding:8px 22px;">
+                                <div class="comment-item">
+                                    <div class="comment-avatar" style="background:#cc0000;">JS</div>
+                                    <div class="comment-body">
+                                        <div class="comment-name">John Smith</div>
+                                        <div class="comment-text">Excellent coverage on the AI Summit article. Well
+                                            researched!</div>
+                                        <div class="comment-meta">On: Global Tech Summit · 5 min ago</div>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <div class="comment-avatar" style="background:#1d4ed8;">EB</div>
+                                    <div class="comment-body">
+                                        <div class="comment-name">Emily Brown</div>
+                                        <div class="comment-text">Very informative report on climate policies.</div>
+                                        <div class="comment-meta">On: Climate Crisis · 22 min ago</div>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <div class="comment-avatar" style="background:#16a34a;">ML</div>
+                                    <div class="comment-body">
+                                        <div class="comment-name">Michael Lee</div>
+                                        <div class="comment-text">Would love more business analysis articles from this
+                                            team.</div>
+                                        <div class="comment-meta">On: Global Markets · 1 hr ago</div>
+                                    </div>
+                                </div>
+                                <div class="comment-item" style="border-bottom:none;">
+                                    <div class="comment-avatar" style="background:#9333ea;">PN</div>
+                                    <div class="comment-body">
+                                        <div class="comment-name">Priya N.</div>
+                                        <div class="comment-text">SpaceX coverage was breathtaking! Keep it coming.
+                                        </div>
+                                        <div class="comment-meta">On: SpaceX Starship · 2 hr ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+    <div class="panel-head">
+        <span class="panel-title">Account Information</span>
+    </div>
+
+    <div class="panel-body">
+        <p><strong>Name:</strong> Hari Krishnan</p>
+        <p><strong>Email:</strong> hari@example.com</p>
+        <p><strong>Member Since:</strong> January 2026</p>
+        <p><strong>Subscription:</strong> Premium</p>
+        <p><strong>Status:</strong> Active</p>
+    </div>
+</div>
+                    </div>
+                </div>
+
+            </div><!-- end page-overview -->
+
+            <!-- ARTICLES PAGE -->
+            <div id="page-articles" style="display:none;">
+                <div class="panel panel-full fade-up">
+                    <div class="panel-head">
+                        <span class="panel-title">All Articles</span>
+                        <button class="btn-primary"><i class="ti ti-plus"></i> New Article</button>
+                    </div>
+                    <div
+                        style="padding:16px 22px;border-bottom:1px solid var(--border);display:flex;gap:10px;flex-wrap:wrap;">
+                        <input class="form-input" style="width:240px;" placeholder="Search articles…" type="text">
+                        <select class="form-select" style="width:160px;">
+                            <option>All Status</option>
+                            <option>Published</option>
+                            <option>Draft</option>
+                            <option>In Review</option>
+                        </select>
+                        <select class="form-select" style="width:160px;">
+                            <option>All Categories</option>
+                            <option>Technology</option>
+                            <option>Politics</option>
+                            <option>Business</option>
+                            <option>Science</option>
+                        </select>
+                    </div>
+                    <div class="tbl-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Headline</th>
+                                    <th>Author</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Views</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="color:var(--text-muted);">1</td>
+                                    <td>Global Tech Summit 2026 Announced</td>
+                                    <td>Sarah Jenkins</td>
+                                    <td><span class="badge badge-info">Tech</span></td>
+                                    <td>Jun 02</td>
+                                    <td>14,230</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="color:var(--text-muted);">2</td>
+                                    <td>The Rising Trends of Decentralized AI</td>
+                                    <td>Alex Rivera</td>
+                                    <td><span class="badge badge-info">Tech</span></td>
+                                    <td>Jun 01</td>
+                                    <td>9,872</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="color:var(--text-muted);">3</td>
+                                    <td>Climate Crisis: A Look at Green Energy</td>
+                                    <td>David K.</td>
+                                    <td><span class="badge badge-gray">Science</span></td>
+                                    <td>May 30</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-warning">Draft</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="color:var(--text-muted);">4</td>
+                                    <td>Global Markets Surge After Fed Pause</td>
+                                    <td>Priya Nair</td>
+                                    <td><span class="badge badge-gray">Business</span></td>
+                                    <td>May 29</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-info">Review</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Edit</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="color:var(--text-muted);">5</td>
+                                    <td>SpaceX Starship Completes 5th Test</td>
+                                    <td>Tom Walsh</td>
+                                    <td><span class="badge badge-gray">Science</span></td>
+                                    <td>May 28</td>
+                                    <td>22,100</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Edit</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- USERS PAGE -->
+            <div id="page-users" style="display:none;">
+                <div class="stats-row" style="grid-template-columns:repeat(3,1fr);">
+                    <div class="stat-card fade-up">
+                        <div class="stat-icon" style="background:#dcfce7;color:#16a34a;"><i class="ti ti-users"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Total Users</div>
+                            <div class="stat-value">3,248</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-1">
+                        <div class="stat-icon" style="background:#dbeafe;color:#1d4ed8;"><i
+                                class="ti ti-user-check"></i></div>
+                        <div class="stat-body">
+                            <div class="stat-label">Active</div>
+                            <div class="stat-value">2,901</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-2">
+                        <div class="stat-icon" style="background:#fef3c7;color:#d97706;"><i
+                                class="ti ti-user-exclamation"></i></div>
+                        <div class="stat-body">
+                            <div class="stat-label">Pending</div>
+                            <div class="stat-value">347</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel fade-up delay-2">
+                    <div class="panel-head">
+                        <span class="panel-title">All Users</span>
+                        <button class="btn-primary"><i class="ti ti-user-plus"></i> Add User</button>
+                    </div>
+                    <div class="tbl-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Role</th>
+                                    <th>Joined</th>
+                                    <th>Articles</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="row-avatar" style="background:#cc0000;">HK</div>
+                                            <div>
+                                                <div style="font-weight:600;font-size:13px;">Hari Krishnan</div>
+                                                <div style="font-size:11px;color:var(--text-muted);">hari@example.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-danger">Admin</span></td>
+                                    <td>Jun 02</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Manage</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="row-avatar" style="background:#1d4ed8;">SJ</div>
+                                            <div>
+                                                <div style="font-weight:600;font-size:13px;">Sarah Jenkins</div>
+                                                <div style="font-size:11px;color:var(--text-muted);">
+                                                    s.jenkins@stackly.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-info">Author</span></td>
+                                    <td>Jan 14</td>
+                                    <td>48</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Manage</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="row-avatar" style="background:#16a34a;">AR</div>
+                                            <div>
+                                                <div style="font-weight:600;font-size:13px;">Alex Rivera</div>
+                                                <div style="font-size:11px;color:var(--text-muted);">
+                                                    a.rivera@stackly.com</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-info">Author</span></td>
+                                    <td>Feb 03</td>
+                                    <td>36</td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Manage</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="row-avatar" style="background:#9333ea;">DM</div>
+                                            <div>
+                                                <div style="font-weight:600;font-size:13px;">David Miller</div>
+                                                <div style="font-size:11px;color:var(--text-muted);">david@example.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-gray">Reader</span></td>
+                                    <td>May 31</td>
+                                    <td>—</td>
+                                    <td><span class="badge badge-warning">Pending</span></td>
+                                    <td><button class="btn-outline"
+                                            style="padding:5px 10px;font-size:12px;">Manage</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANALYTICS PAGE -->
+            <div id="page-analytics" style="display:none;">
+                <div class="stats-row" style="grid-template-columns:repeat(4,1fr);">
+                    <div class="stat-card fade-up">
+                        <div class="stat-icon" style="background:#fff0f0;color:#cc0000;"><i class="ti ti-eye"></i></div>
+                        <div class="stat-body">
+                            <div class="stat-label">Total Views</div>
+                            <div class="stat-value">2.4M</div>
+                            <div class="stat-delta up"><i class="ti ti-trending-up"></i>+18%</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-1">
+                        <div class="stat-icon" style="background:#dcfce7;color:#16a34a;"><i class="ti ti-clock"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Avg. Read Time</div>
+                            <div class="stat-value">4m 12s</div>
+                            <div class="stat-delta up"><i class="ti ti-trending-up"></i>+0.3m</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-2">
+                        <div class="stat-icon" style="background:#dbeafe;color:#1d4ed8;"><i class="ti ti-repeat"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Return Visitors</div>
+                            <div class="stat-value">61%</div>
+                            <div class="stat-delta up"><i class="ti ti-trending-up"></i>+4%</div>
+                        </div>
+                    </div>
+                    <div class="stat-card fade-up delay-3">
+                        <div class="stat-icon" style="background:#fdf4ff;color:#9333ea;"><i class="ti ti-share"></i>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Social Shares</div>
+                            <div class="stat-value">18.3k</div>
+                            <div class="stat-delta up"><i class="ti ti-trending-up"></i>+220</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel fade-up delay-2">
+                    <div class="panel-head"><span class="panel-title">Monthly Traffic — 2026</span></div>
+                    <div class="panel-body">
+                        <div class="chart-container" style="height:280px;"><canvas id="monthlyChart"></canvas></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEWSLETTER PAGE -->
+            <div id="page-newsletter" style="display:none;">
+                <div class="grid-2 fade-up">
+                    <div class="panel">
+                        <div class="panel-head"><span class="panel-title">Compose Newsletter</span></div>
+                        <div class="panel-body">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Subject Line</label>
+                                    <input class="form-input" type="text" placeholder="Enter email subject…">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Audience</label>
+                                    <select class="form-select">
+                                        <option>All Subscribers (42,100)</option>
+                                        <option>Premium Members</option>
+                                        <option>Tech Category</option>
+                                        <option>Politics Category</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-textarea"
+                                        placeholder="Write your newsletter content…"></textarea>
+                                </div>
+                                <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                                    <button class="btn-primary"><i class="ti ti-send"></i>Send Newsletter</button>
+                                    <button class="btn-outline">Save Draft</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head"><span class="panel-title">Recent Campaigns</span></div>
+                        <div class="tbl-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Sent</th>
+                                        <th>Open Rate</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Weekly Digest #22</td>
+                                        <td>42,100</td>
+                                        <td>48%</td>
+                                        <td><span class="badge badge-success">Sent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Breaking: Tech Summit</td>
+                                        <td>42,100</td>
+                                        <td>61%</td>
+                                        <td><span class="badge badge-success">Sent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Climate Special Edition</td>
+                                        <td>39,400</td>
+                                        <td>44%</td>
+                                        <td><span class="badge badge-success">Sent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weekly Digest #21</td>
+                                        <td>41,800</td>
+                                        <td>51%</td>
+                                        <td><span class="badge badge-success">Sent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monthly Roundup — May</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td><span class="badge badge-warning">Draft</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SETTINGS PAGE -->
+            <div id="page-settings" style="display:none;">
+                <div class="grid-2 fade-up">
+                    <div class="panel">
+                        <div class="panel-head"><span class="panel-title">Site Settings</span></div>
+                        <div class="panel-body">
+                            <div class="form-row">
+                                <div class="form-group"><label class="form-label">Site Name</label><input
+                                        class="form-input" value="Stackly News" type="text"></div>
+                                <div class="form-group"><label class="form-label">Tagline</label><input
+                                        class="form-input" value="Breaking news, everyday." type="text"></div>
+                                <div class="form-group"><label class="form-label">Admin Email</label><input
+                                        class="form-input" value="admin@stacklynews.com" type="email"></div>
+                                <div class="form-group"><label class="form-label">Timezone</label>
+                                    <select class="form-select">
+                                        <option>UTC+5:30 — India Standard Time</option>
+                                        <option>UTC+0:00 — Greenwich Mean Time</option>
+                                        <option>UTC-5:00 — Eastern Time</option>
+                                    </select>
+                                </div>
+                                <div style="display:flex;gap:10px;">
+                                    <button class="btn-primary"><i class="ti ti-device-floppy"></i>Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-head"><span class="panel-title">Security Settings</span></div>
+                        <div class="panel-body">
+                            <div class="form-row">
+                                <div class="form-group"><label class="form-label">Current Password</label><input
+                                        class="form-input" type="password" placeholder="••••••••"></div>
+                                <div class="form-group"><label class="form-label">New Password</label><input
+                                        class="form-input" type="password" placeholder="••••••••"></div>
+                                <div class="form-group"><label class="form-label">Confirm Password</label><input
+                                        class="form-input" type="password" placeholder="••••••••"></div>
+                                <button class="btn-primary"><i class="ti ti-lock"></i>Update Password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel fade-up delay-2">
+                    <div class="panel-head"><span class="panel-title">Quick Page Navigation</span></div>
+                    <div class="panel-body">
+                        <div class="pages-grid">
+                            <div class="page-card"><i class="ti ti-layout-dashboard"></i>
+                                <div class="page-card-title">Dashboard</div>
+                                <div class="page-card-sub">Overview & stats</div>
+                            </div>
+                            <div class="page-card"><i class="ti ti-article"></i>
+                                <div class="page-card-title">Saved Articles</div>
+                                <div class="page-card-sub">Manage all posts</div>
+                            </div>
+                            <div class="page-card"><i class="ti ti-users"></i>
+                                <div class="page-card-title">My Profile</div>
+                                <div class="page-card-sub">Manage your account</div>
+                            </div>
+                            <div class="page-card"><i class="ti ti-mail"></i>
+                                <div class="page-card-title">Newsletter</div>
+                                <div class="page-card-sub">Email campaigns</div>
+                            </div>
+                            <div class="page-card"><i class="ti ti-chart-bar"></i>
+                                <div class="page-card-title">Reading Analytics</div>
+                                <div class="page-card-sub">Traffic reports</div>
+                            </div>
+                            <div class="page-card"><i class="ti ti-shield-check"></i>
+                                <div class="page-card-title">Security</div>
+                                <div class="page-card-sub">Logs & scans</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GENERIC PAGE PLACEHOLDER -->
+            <div id="page-generic" style="display:none;">
+                <div class="panel fade-up" style="text-align:center;padding:60px 20px;">
+                    <i class="ti ti-tools"
+                        style="font-size:48px;color:var(--text-light);display:block;margin-bottom:16px;"></i>
+                    <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:var(--text);margin-bottom:8px;"
+                        id="genericTitle">Page</div>
+                    <div style="color:var(--text-muted);font-size:14px;">This section is under construction. Check back
+                        soon.</div>
+                </div>
+            </div>
+
+        </div><!-- end content -->
+    </div><!-- end main -->
+
+    <script>
+        // ===================== HAMBURGER =====================
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const hamBtn = document.getElementById('hamBtn');
+
+        hamBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+        // ===================== NAV / PAGES =====================
+        const pageMap = {
+            overview: 'Overview', articles: 'Manage Articles',
+            breaking: 'Breaking News', categories: 'Categories',
+            media: 'Media Library', users: 'Users',
+            subscribers: 'Subscribers', comments: 'Comments',
+            newsletter: 'Newsletter', analytics: 'Analytics',
+            ads: 'Ads & Promotions', settings: 'Settings',
+            security: 'Security', logs: 'System Logs'
+        };
+        const pagedPages = ['overview', 'articles', 'users', 'analytics', 'newsletter', 'settings'];
+
+        function setPage(key, el) {
+            document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            if (el) el.classList.add('active');
+            document.getElementById('pageTitle').textContent = pageMap[key] || key;
+
+            pagedPages.forEach(p => document.getElementById('page-' + p).style.display = 'none');
+            document.getElementById('page-generic').style.display = 'none';
+
+            if (pagedPages.includes(key)) {
+                document.getElementById('page-' + key).style.display = '';
+                if (key === 'analytics') initMonthlyChart();
+            } else {
+                document.getElementById('genericTitle').textContent = pageMap[key] || key;
+                document.getElementById('page-generic').style.display = '';
+            }
+
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            }
+        }
+
+        // ===================== COUNTER ANIMATION =====================
+        function animCount(id, target, suffix = '') {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const dur = 1400, start = performance.now();
+            const display = v => {
+                if (v >= 1000) el.textContent = (v / 1000).toFixed(v >= 10000 ? 0 : 1) + 'k' + suffix;
+                else el.textContent = v + suffix;
+            };
+            const step = now => {
+                const p = Math.min((now - start) / dur, 1);
+                const ease = 1 - Math.pow(1 - p, 3);
+                display(Math.round(ease * target));
+                if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+        setTimeout(() => {
+            animCount('cnt-articles', 1248);
+            animCount('cnt-subs', 42100);
+            animCount('cnt-views', 94520);
+            animCount('cnt-pending', 28);
+            animCount('cnt-cats', 12);
+            animCount('cnt-breaking', 15);
+        }, 200);
+
+        // ===================== PROGRESS BARS =====================
+        setTimeout(() => {
+            document.querySelectorAll('.prog-fill').forEach(b => {
+                b.style.width = b.dataset.w + '%';
+            });
+        }, 400);
+
+        // ===================== TRAFFIC CHART =====================
+        const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+        new Chart(trafficCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [
+                    {
+                        label: 'Page Views',
+                        data: [62000, 78000, 55000, 91000, 84000, 70000, 94520],
+                        borderColor: '#cc0000',
+                        backgroundColor: 'rgba(204,0,0,0.07)',
+                        borderWidth: 2.5,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#cc0000',
+                        fill: true,
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Unique Visitors',
+                        data: [31000, 40000, 28000, 49000, 42000, 36000, 47000],
+                        borderColor: '#1d4ed8',
+                        backgroundColor: 'rgba(29,78,216,0.05)',
+                        borderWidth: 2,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#1d4ed8',
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { position: 'top', labels: { boxWidth: 10, font: { family: 'DM Sans', size: 12 } } } },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { family: 'DM Sans', size: 11 } } },
+                    y: { grid: { color: '#f0f2f5' }, ticks: { font: { family: 'DM Sans', size: 11 }, callback: v => v >= 1000 ? (v / 1000) + 'k' : v } }
+                }
+            }
+        });
+
+        // ===================== DONUT CHART =====================
+        const donutCtx = document.getElementById('donutChart').getContext('2d');
+        new Chart(donutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Technology', 'Politics', 'Business', 'Science', 'Others'],
+                datasets: [{
+                    data: [38, 24, 18, 12, 8],
+                    backgroundColor: ['#cc0000', '#1d4ed8', '#16a34a', '#9333ea', '#f59e0b'],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                cutout: '68%',
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // ===================== MONTHLY CHART =====================
+        let monthlyInited = false;
+        function initMonthlyChart() {
+            if (monthlyInited) return;
+            monthlyInited = true;
+            const ctx = document.getElementById('monthlyChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [
+                        { label: 'Page Views', data: [1.2, 1.5, 1.8, 2.0, 2.1, 2.4], backgroundColor: '#cc0000', borderRadius: 6 },
+                        { label: 'Unique Users', data: [0.7, 0.9, 1.0, 1.1, 1.2, 1.3], backgroundColor: '#1d4ed8', borderRadius: 6 }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { position: 'top', labels: { boxWidth: 10, font: { family: 'DM Sans', size: 12 } } } },
+                    scales: {
+                        x: { grid: { display: false }, ticks: { font: { family: 'DM Sans', size: 12 } } },
+                        y: { grid: { color: '#f0f2f5' }, ticks: { font: { family: 'DM Sans', size: 12 }, callback: v => v + 'M' } }
+                    }
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
