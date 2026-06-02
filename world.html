@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACKLY  News � Stay Informed. Stay Ahead.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== TOP UTILITY BAR ========== -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span id="live-date"></span>
+                <span class="sep">|</span>
+                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;New York, USA</span>
+                <span class="sep">|</span>
+                <span class="breaking-ticker">
+                    <span class="breaking-label">BREAKING</span>
+                    <div class="ticker-wrap">
+                        <div class="ticker-track" id="ticker">
+                            <span>World leaders convene for emergency climate summit <span class="ticker-dot">.</span> Markets surge on strong jobs report <span class="ticker-dot">.</span> NASA announces new lunar mission date<span class="ticker-dot">.</span> Major merger shakes the tech sector <span class="ticker-dot">.</span> Championship final set for Sunday showdown <span class="ticker-dot">.</span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="top-bar-right">
+                <a href="./404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="./404.html" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="./404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="./404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="./404.html" class="subscribe-btn">SUBSCRIBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MAIN HEADER ========== -->
+    <header class="main-header" id="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <h1>STACKLY </h1>
+                <p>DAILY NEWS </p>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="./index.html" class="nav-link active" data-page="home">HOME</a></li>
+                    <li><a href="./world.html" class="nav-link" data-page="world">WORLD</a></li>
+                    <li><a href="./politics.html" class="nav-link" data-page="politics">POLITICS</a></li>
+                    <li><a href="./business.html" class="nav-link" data-page="business">BUSINESS</a></li>
+                    <li><a href="./technology.html" class="nav-link" data-page="technology">TECHNOLOGY</a></li>
+                    <li><a href="./sports.html" class="nav-link" data-page="sports">SPORTS</a></li>
+                    <li><a href="./lifestyle.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
+                    <li><a href="./opinion.html" class="nav-link" data-page="opinion">OPINION</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button class="ctrl-btn" id="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="ctrl-btn" id="dark-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+                <button class="ctrl-btn hamburger" id="menu-toggle" aria-label="Menu" aria-controls="mobile-nav" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+                <a href="./404.html" class="login-btn"><button>Login</button></a>
+            </div>
+        </div>
+        <!-- Search bar -->
+        <div class="search-bar" id="search-bar">
+            <div class="container">
+                <input type="text" placeholder="Search for news, topics, or reporters..." id="search-input">
+                <button id="search-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <!-- Mobile nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="./404.html" class="nav-link" data-page="home">HOME</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="world">WORLD</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="politics">POLITICS</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="business">BUSINESS</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="technology">TECHNOLOGY</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="sports">SPORTS</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="opinion">OPINION</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-section">
+
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <img class="hero-slide-img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1600"
+                alt="Flood Crisis">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge-pill badge-red">BREAKING NEWS</span>
+                    <h1 class="hero-title"> Flooding Forces<br><em>Three Million</em> From Their Homes
+                        Across South Asia</h1>
+                    <p class="hero-desc">Monsoon rains of unprecedented intensity have inundated cities across
+                        Bangladesh, India, and Myanmar. Aid agencies warn of a humanitarian disaster as rescue
+                        operations struggle to keep pace.</p>
+                    <div class="hero-meta">
+                        <span>WORLD NEWS</span><span class="sep-dot"></span>
+                        <span>June 2, 2026</span><span class="sep-dot"></span>
+                        <span>8 Min Read</span>
+                    </div>
+                    <div style="display:flex;gap:12px;">
+                        <a href="#" class="btn-primary">READ STORY <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn-outline">WATCH VIDEO</a>
+                    </div>
+                </div>
+                <div class="hero-sidebar">
+                    <a href="#" class="hero-sidebar-item">
+                        <div class="sidebar-thumb"><img
+                                src="https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=500" alt=""></div>
+                        <div class="sidebar-info">
+                            <div class="cat-time"><span class="cat-label cat-politics">POLITICS</span><span
+                                    class="time">45 mins ago</span></div>
+                            <h3>UN Security Council Deadlocked Over Eastern Europe Ceasefire Resolution</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="hero-sidebar-item">
+                        <div class="sidebar-thumb"><img
+                                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500" alt=""></div>
+                        <div class="sidebar-info">
+                            <div class="cat-time"><span class="cat-label cat-technology">TECH</span><span
+                                    class="time">1h ago</span></div>
+                            <h3>Quantum Computing Firm Claims First Commercial Advantage Over Classical Systems</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="hero-sidebar-item">
+                        <div class="sidebar-thumb"><img
+                                src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500" alt=""></div>
+                        <div class="sidebar-info">
+                            <div class="cat-time"><span class="cat-label cat-sports">SPORTS</span><span class="time">2h
+                                    ago</span></div>
+                            <h3>Brazil and Germany Set to Clash in Men's Football World Cup Final</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <img class="hero-slide-img" src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1600"
+                alt="Trade War">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge-pill badge-gold">ANALYSIS</span>
+                    <h1 class="hero-title"> New Trade War:<br>Tariff Escalation Is<br><em>Redrawing Global Supply
+                            Chains</em></h1>
+                    <p class="hero-desc">With the EU and China all imposing sweeping new levies, economists warn
+                        the era of frictionless globalisation may be definitively over.</p>
+                    <div class="hero-meta">
+                        <span>ECONOMICS</span><span class="sep-dot"></span>
+                        <span>June 2, 2026</span><span class="sep-dot"></span>
+                        <span>12 Min Read</span>
+                    </div>
+                    <a href="#" class="btn-primary">READ STORY <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+            <img class="hero-slide-img" src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1600"
+                alt="Mars Mission">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge-pill badge-black">SCIENCE</span>
+                    <h1 class="hero-title">Humanity's First Crewed<br>Mars Mission Enters<br><em>Final Countdown</em>
+                    </h1>
+                    <p class="hero-desc">Six astronauts are set to depart Earth orbit within 72 hours in a joint mission
+                        that has been more than a decade in the making.</p>
+                    <div class="hero-meta">
+                        <span>SPACE</span><span class="sep-dot"></span>
+                        <span>June 2, 2026</span><span class="sep-dot"></span>
+                        <span>6 Min Read</span>
+                    </div>
+                    <a href="#" class="btn-primary">READ STORY <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="hero-controls">
+            <button class="hero-nav-btn prev-slide"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="hero-dots">
+                <span class="hero-dot active"></span>
+                <span class="hero-dot"></span>
+                <span class="hero-dot"></span>
+            </div>
+            <button class="hero-nav-btn next-slide"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="section-wrap">
+        <div class="container">
+            <div class="home-main-grid">
+
+                <!-- LEFT -->
+                <div class="home-content">
+
+                    <!-- FEATURED -->
+                    <article class="news-card-featured">
+                        <div class="featured-image">
+                            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200"
+                                alt="Flooding">
+                        </div>
+                        <div class="featured-body">
+                            <span class="badge-pill badge-red">BREAKING NEWS</span>
+                            <h2>Catastrophic Flooding Displaces <em>Three Million</em> Across South Asia</h2>
+                            <p>Unprecedented monsoon intensity across Bangladesh, eastern India, and large swathes of
+                                Myanmar has triggered the region's worst humanitarian emergency in two decades. Aid
+                                convoys are struggling to navigate submerged roads, while governments appeal for
+                                international assistance.</p>
+                            <a href="#" class="btn-primary">READ FULL STORY <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- LATEST NEWS -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>LATEST NEWS</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-world">WORLD</span><span
+                                            class="time">30 mins ago</span></div>
+                                    <h3>Pacific Island Nations Issue Joint Statement on Rising Sea Levels</h3>
+                                    <p>Twelve governments demand binding commitments from major emitters at the upcoming
+                                        Suva Climate Summit.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-technology">TECH</span><span
+                                            class="time">1h ago</span></div>
+                                    <h3>OpenMind AI Announces Model With Real-Time Reasoning Transparency</h3>
+                                    <p>The new architecture allows users to audit every step of the model's decision
+                                        process — a first in consumer AI.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-business">BUSINESS</span><span
+                                            class="time">2h ago</span></div>
+                                    <h3>European Central Bank Signals Rate Cuts May Come Sooner Than Expected</h3>
+                                    <p>Soft inflation data and slowing growth push policymakers toward earlier easing of
+                                        monetary conditions.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-sports">SPORTS</span><span
+                                            class="time">3h ago</span></div>
+                                    <h3>French Open: Teenage Sensation Wins First Grand Slam Title After Five-Set Epic
+                                    </h3>
+                                    <p>The 18-year-old from Bogotá becomes the youngest Roland Garros champion in the
+                                        Open Era.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- WORLD NEWS -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>WORLD NEWS</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-world">WORLD</span></div>
+                                    <h3>UN Peacekeeping Mission Extended in Central African Republic</h3>
+                                    <p>The Security Council vote extends MINUSCA's mandate by 18 months amid renewed
+                                        militia activity near Bangui.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1476304884326-cd2c88572c5f?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-world">WORLD</span></div>
+                                    <h3>Severe Drought Threatens Food Security Across East Africa Horn</h3>
+                                    <p>Failing rains for a third consecutive season push an estimated 20 million people
+                                        toward acute hunger.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1473625247510-8cebabb376b2?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-world">WORLD</span></div>
+                                    <h3>Arctic Council Meets as Member States Dispute Seabed Resource Rights</h3>
+                                    <p>Russia, Canada, and Denmark clash over overlapping claims to mineral-rich
+                                        territory beneath the Lomonosov Ridge.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-world">WORLD</span></div>
+                                    <h3>Mexico City Signs Historic Water Pact With Seven Neighbouring States</h3>
+                                    <p>The agreement redistributes aquifer access rights in a bid to prevent the
+                                        capital's catastrophic sinking from continuing.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-world">WORLD</span></div>
+                                    <h3>Italy and Albania Strike Landmark Migration Management Deal</h3>
+                                    <p>The accord creates joint offshore processing centres in a move that is dividing
+                                        European public opinion sharply.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-world">WORLD</span></div>
+                                    <h3>Taiwan Strait Tensions Ease After US–China Back-Channel Talks</h3>
+                                    <p>Senior diplomats from both sides met secretly in Singapore for three days in what
+                                        officials call a "stabilising exchange."</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- POLITICS -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>POLITICS</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-politics">POLITICS</span></div>
+                                    <h3>UK Government Announces Snap General Election for August</h3>
+                                    <p>Prime Minister calls the vote six months early, citing a need for a fresh mandate
+                                        ahead of Brexit renegotiations.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1521791055366-0d553872952f?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-politics">POLICY</span></div>
+                                    <h3>US Senate Passes Landmark AI Accountability Act in Bipartisan Vote</h3>
+                                    <p>The bill mandates independent audits for high-risk AI deployments in healthcare,
+                                        justice, and financial sectors.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-politics">ELECTION</span></div>
+                                    <h3>South Korean Presidential Race Tightens to Single-Digit Margin</h3>
+                                    <p>New polls show the opposition candidate erasing a 14-point gap with just three
+                                        weeks until voting day.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-politics">DIPLOMACY</span></div>
+                                    <h3>India and Pakistan Hold First Foreign Minister Talks in Four Years</h3>
+                                    <p>The meeting in Dubai is described as exploratory, with water rights and Kashmir
+                                        topping the agenda.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1569163139599-0f4517e36f51?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-politics">POLITICS</span></div>
+                                    <h3>Brazil's Congress Passes Sweeping Amazon Protection Framework</h3>
+                                    <p>The legislation reinstates environmental licensing requirements and triples fines
+                                        for illegal deforestation activity.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-politics">POLITICS</span></div>
+                                    <h3>German Coalition Government Survives No-Confidence Vote by Slim Margin</h3>
+                                    <p>The three-party alliance holds together despite deep divisions over defence
+                                        spending and immigration reform.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- BUSINESS -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>BUSINESS NEWS</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-business">MARKETS</span></div>
+                                    <h3>Copper Prices Surge to 18-Month High on Green Energy Demand</h3>
+                                    <p>Electric vehicle and grid battery buildout is absorbing supply faster than mines
+                                        can scale output.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-business">FINANCE</span></div>
+                                    <h3>JP Morgan Reports Record Q2 Profits Driven by Investment Banking Rebound</h3>
+                                    <p>Merger activity and debt issuance boomed in the second quarter as corporate
+                                        confidence recovered strongly.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1559526324-593bc073d938?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-business">ECONOMY</span></div>
+                                    <h3>India Overtakes Japan to Become World's Third-Largest Economy</h3>
+                                    <p>IMF revises its rankings after India's GDP crossed the $5.4 trillion mark, driven
+                                        by manufacturing and services growth.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-business">STARTUP</span></div>
+                                    <h3>Fusion Energy Startup Raises $2.1 Billion in Largest Clean Tech Round Ever</h3>
+                                    <p>Investors including sovereign wealth funds back the company ahead of its planned
+                                        reactor demonstration next year.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-business">TRADE</span></div>
+                                    <h3>ASEAN Free Trade Expansion Brings 600 Million New Consumers Into Zone</h3>
+                                    <p>The updated agreement lowers tariffs on digital services and agricultural produce
+                                        across ten member states.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-business">BUSINESS</span></div>
+                                    <h3>Boeing Secures First Major Commercial Order in 18 Months</h3>
+                                    <p>Korean Air signs a $9 billion deal for 40 next-generation 777X aircraft following
+                                        the manufacturer's safety reforms.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- TECHNOLOGY -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>TECHNOLOGY</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-technology">HARDWARE</span></div>
+                                    <h3>Nvidia's H300 Chip Delivers 10× Performance Gain Over Previous Generation</h3>
+                                    <p>Benchmark tests confirm a step-change in AI training throughput that will reshape
+                                        data centre economics globally.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-technology">CYBERSECURITY</span>
+                                    </div>
+                                    <h3>Nation-State Hackers Breach Three European Energy Grid Operators</h3>
+                                    <p>Security agencies from Germany, France, and Poland jointly attribute the attacks
+                                        to a known APT group linked to Moscow.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-technology">ROBOTICS</span></div>
+                                    <h3>Autonomous Surgical Robot Completes 1,000th Procedure Without Human Assistance
+                                    </h3>
+                                    <p>The milestone at Seoul National University Hospital marks a turning point for
+                                        robot-assisted medicine.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-technology">AI</span></div>
+                                    <h3>EU AI Act Enters Full Enforcement Phase — Here's What Changes Now</h3>
+                                    <p>Businesses have 90 days to comply with new risk-tier classifications or face
+                                        fines of up to 6% of global turnover.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-technology">SPACE TECH</span>
+                                    </div>
+                                    <h3>Starship's 12th Test Flight Achieves Full Orbital Insertion and Recovery</h3>
+                                    <p>Both the booster and ship stages are successfully caught by the launch tower's
+                                        mechanical arms for the first time.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1536240478700-b869ad10e2d5?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-technology">SOCIAL MEDIA</span>
+                                    </div>
+                                    <h3>Bluesky Surpasses 200 Million Users as Advertisers Follow the Audience</h3>
+                                    <p>The decentralised platform's growth is accelerating as brands shift budget away
+                                        from legacy social networks.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- SPORTS -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>SPORTS</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-sports">FOOTBALL</span></div>
+                                    <h3>Brazil vs Germany: World Cup Final Preview and Predicted Line-Ups</h3>
+                                    <p>Sunday's final in Riyadh pits Endrick's brilliance against Germany's new-look
+                                        pressing machine.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-sports">TENNIS</span></div>
+                                    <h3>Djokovic Retires Mid-Match at Roland Garros; Crowd Falls Silent</h3>
+                                    <p>The 39-year-old cites a recurring knee problem and leaves the court to a lengthy
+                                        standing ovation.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-sports">ATHLETICS</span></div>
+                                    <h3>Jamaica's Joshua Wright Sets New 200m World Record in Oslo Diamond League</h3>
+                                    <p>The 22-year-old clocks 19.12 seconds, slicing 0.06 off the previous benchmark set
+                                        in Tokyo in 2021.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-sports">CYCLING</span></div>
+                                    <h3>Tour de France Route Unveiled: Six Summit Finishes in Alpine Fortnight</h3>
+                                    <p>The 2026 parcours is widely described as the hardest in a generation, with
+                                        organisers targeting fewer sprint stages.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1508098682722-e99c643e7f0b?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-sports">BASKETBALL</span></div>
+                                    <h3>Golden State Warriors Win NBA Championship in Six Games Over Boston</h3>
+                                    <p>Steph Curry, at 38, wins his fifth ring after a transcendent performance in Games
+                                        4, 5, and 6.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-sports">CRICKET</span></div>
+                                    <h3>England Claim Ashes Series 3–1 in Dominant Display at The Oval</h3>
+                                    <p>Ben Stokes' reinvented side complete a dominant home series for the first time in
+                                        12 years.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- LIFESTYLE -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>LIFESTYLE</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-lifestyle">FOOD</span></div>
+                                    <h3>Fermented Foods Become a $12 Billion Industry as Gut Health Goes Mainstream</h3>
+                                    <p>From kimchi to kefir, consumers are reaching for probiotic-rich options at record
+                                        rates across Western markets.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-lifestyle">WELLNESS</span></div>
+                                    <h3>The Science Behind the Four-Day Working Week — What a Year of Trials Reveals
+                                    </h3>
+                                    <p>Data from 400 companies across 15 countries shows productivity unchanged or
+                                        improved in 92% of cases.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-lifestyle">TRAVEL</span></div>
+                                    <h3>Off-Grid Retreats Report 300% Booking Surge as Digital Detox Demand Soars</h3>
+                                    <p>Remote wilderness lodges with no connectivity are selling out months in advance
+                                        across Europe and North America.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-lifestyle">FASHION</span></div>
+                                    <h3>Deadstock Denim Becomes the Hottest Commodity on the Luxury Resale Market</h3>
+                                    <p>Vintage selvedge finds from 1960s Japan are commanding prices that rival new
+                                        luxury goods at auction.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-lifestyle">HOME</span></div>
+                                    <h3>Prefab Micro-Homes Are Redefining Affordable Urban Living Across Asia</h3>
+                                    <p>Factory-built units that ship flat and self-assemble in 48 hours are reshaping
+                                        housing in Hong Kong, Tokyo, and Seoul.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-lifestyle">RELATIONSHIPS</span>
+                                    </div>
+                                    <h3>The Loneliness Epidemic: Why Friendship Is Now a Public Health Priority</h3>
+                                    <p>Governments from the UK to Japan have appointed ministers for social isolation as
+                                        research mounts on its health impact.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- OPINION -->
+                    <div class="sticky-header">
+                        <div class="section-header">
+                            <h2>OPINION</h2>
+                            <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-opinion">OPINION</span></div>
+                                    <h3>We Can't Regulate AI Into Safety — We Need to Rethink Incentives Entirely</h3>
+                                    <p>Compliance frameworks will always lag capability. The real question is who
+                                        profits when systems fail.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-opinion">EDITORIAL</span></div>
+                                    <h3>The G7 Has Become a Theatre of Consensus Without Consequence</h3>
+                                    <p>Each communiqué promises more than the last. The gap between declaration and
+                                        action has never been wider.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-opinion">COMMENTARY</span></div>
+                                    <h3>Nuclear Power Is Not the Climate Silver Bullet Its Proponents Claim It Is</h3>
+                                    <p>Build times, costs, and waste management make fission a poor bet when renewables
+                                        are scaling at this pace.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-opinion">PERSPECTIVE</span></div>
+                                    <h3>China's Belt and Road at 13: A Legacy More Complicated Than Critics Admit</h3>
+                                    <p>Infrastructure built across Africa and Asia has flaws, but it also has roads,
+                                        ports, and hospitals that did not exist before.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-opinion">ESSAY</span></div>
+                                    <h3>Why the Global South Is Done Waiting for the World's Climate Promises</h3>
+                                    <p>Patience has run out. Developing nations are now building coalitions and
+                                        demanding reparative climate finance.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image"><img
+                                        src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=700" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta"><span class="cat-label cat-opinion">OPINION</span></div>
+                                    <h3>The Case for a Global Internet Governance Treaty Is Now Unanswerable</h3>
+                                    <p>A fragmented, unaccountable web now poses systemic risks comparable to those of
+                                        unregulated financial markets.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDEBAR -->
+                <aside class="home-sidebar">
+                    <h3>TRENDING NOW</h3>
+
+                    <div class="trending-item">
+                        <div class="trending-num">01</div>
+                        <div class="trending-text">
+                            <h4>South Asian Floods Force Three Million to Flee Homes</h4>
+                            <div class="time">12 mins ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">02</div>
+                        <div class="trending-text">
+                            <h4>Mars Mission Crew Enters Final Pre-Launch Quarantine</h4>
+                            <div class="time">34 mins ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">03</div>
+                        <div class="trending-text">
+                            <h4>UK Snap Election Confirmed for August 14</h4>
+                            <div class="time">55 mins ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">04</div>
+                        <div class="trending-text">
+                            <h4>World Cup Final: Brazil vs Germany Team News Confirmed</h4>
+                            <div class="time">1h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">05</div>
+                        <div class="trending-text">
+                            <h4>Djokovic Retirement Stuns Roland Garros Crowd</h4>
+                            <div class="time">2h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">06</div>
+                        <div class="trending-text">
+                            <h4>India Becomes Third-Largest Economy, Overtaking Japan</h4>
+                            <div class="time">3h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">07</div>
+                        <div class="trending-text">
+                            <h4>EU AI Act Enforcement Begins: What Businesses Must Do Now</h4>
+                            <div class="time">3h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">08</div>
+                        <div class="trending-text">
+                            <h4>Nvidia H300 Chip Benchmarks Leak Before Official Launch</h4>
+                            <div class="time">4h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">09</div>
+                        <div class="trending-text">
+                            <h4>East Africa Drought: 20 Million Face Acute Food Shortage</h4>
+                            <div class="time">5h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">10</div>
+                        <div class="trending-text">
+                            <h4>Golden State Warriors Clinch Fifth Title in Curry's Farewell Season</h4>
+                            <div class="time">6h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">11</div>
+                        <div class="trending-text">
+                            <h4>Fusion Energy Startup Closes $2.1 Billion Funding Round</h4>
+                            <div class="time">7h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">12</div>
+                        <div class="trending-text">
+                            <h4>Arctic Council Convenes Amid Resource Rights Dispute</h4>
+                            <div class="time">8h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">13</div>
+                        <div class="trending-text">
+                            <h4>Bluesky Crosses 200 Million Users Milestone</h4>
+                            <div class="time">9h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">14</div>
+                        <div class="trending-text">
+                            <h4>ECB Rate Cut Now Expected in September, Not December</h4>
+                            <div class="time">10h ago</div>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-num">15</div>
+                        <div class="trending-text">
+                            <h4>Loneliness Declared a Public Health Crisis by WHO</h4>
+                            <div class="time">11h ago</div>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OPINION & ANALYSIS FEATURE -->
+    <section class="section-wrap sticky-header"
+        style="background: var(--gray-1); padding-top: 56px; padding-bottom: 56px;">
+        <div class="container">
+            <div class="section-header">
+                <h2>OPINION & ANALYSIS</h2>
+                <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="top-story-grid">
+                <article class="top-story-large">
+                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200"
+                        alt="Opinion Feature">
+                    <div class="top-story-overlay">
+                        <span class="badge-pill badge-gold">LEAD ESSAY</span>
+                        <h2>The End of the Post-War Order and What Comes Next</h2>
+                        <div class="time">Analysis · 1h ago</div>
+                    </div>
+                </article>
+                <div class="top-story-stack">
+                    <article class="top-story-small">
+                        <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?w=800" alt="Health">
+                        <div class="top-story-overlay">
+                            <span class="badge-pill badge-black">HEALTH POLICY</span>
+                            <h2>Universal Healthcare Is Affordable — Political Will Is the Real Barrier</h2>
+                            <div class="time">3h ago</div>
+                        </div>
+                    </article>
+                    <article class="top-story-small">
+                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800" alt="Science">
+                        <div class="top-story-overlay">
+                            <span class="badge-pill badge-black">SCIENCE & SOCIETY</span>
+                            <h2>Why We Keep Ignoring What Scientists Tell Us About Risk</h2>
+                            <div class="time">4h ago</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCIENCE & HEALTH -->
+    <section class="section-wrap sticky-header">
+        <div class="container">
+            <div class="section-header">
+                <h2>SCIENCE & HEALTH</h2>
+                <a href="#" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="cards-grid-3">
+                <article class="news-card">
+                    <div class="card-image"><img
+                            src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600" alt=""></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="cat-label cat-health">HEALTH</span><span class="time">1h
+                                ago</span></div>
+                        <h3>Weekly GLP-1 Injections Shown to Reverse Early-Stage Type 2 Diabetes</h3>
+                        <p>A five-year clinical trial involving 14,000 patients demonstrates remission in 38% of cases
+                            with no surgical intervention.</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="card-image"><img
+                            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt=""></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="cat-label cat-science">SCIENCE</span><span class="time">2h
+                                ago</span></div>
+                        <h3>CRISPR Gene Therapy Delivers First Complete Sickle Cell Disease Cures</h3>
+                        <p>Forty-seven patients show no recurrence of symptoms two years after receiving the one-time
+                            treatment in London and Chicago trials.</p>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="card-image"><img
+                            src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600" alt=""></div>
+                    <div class="card-body">
+                        <div class="card-meta"><span class="cat-label cat-world">ENVIRONMENT</span><span class="time">4h
+                                ago</span></div>
+                        <h3>Great Barrier Reef Records Highest Coral Cover in 36 Years</h3>
+                        <p>Reduced coastal runoff and a cooler-than-usual La Niña season have allowed unprecedented
+                            regeneration across northern sectors.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- FOOTER -->
+   <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>STACKLY   <span>NEWS</span></h2>
+                <p>Delivering accurate, timely, and in-depth coverage of the stories that shape our world. Trusted by millions of readers globally.</p>
+                <div class="footer-socials">
+                    <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>SECTIONS</h4>
+                <ul>
+                    <li><a href="./404.html">World</a></li>
+                    <li><a href="./404.html">Politics</a></li>
+                    <li><a href="./404.html">Business</a></li>
+                    <li><a href="./404.html">Technology</a></li>
+                    <li><a href="./404.html">Sports</a></li>
+                    <li><a href="./404.html">Lifestyle</a></li>
+                    <li><a href="./404.html">Opinion</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="./404.html">About Us</a></li>
+                    <li><a href="./404.html">Editorial Policy</a></li>
+                    <li><a href="./404.html">Advertise</a></li>
+                    <li><a href="./404.html">Careers</a></li>
+                    <li><a href="./404.html">Contact</a></li>
+                    <li><a href="./404.html">Press Room</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>NEWSLETTER</h4>
+                <p>Get the day's top stories delivered to your inbox every morning.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>@ 2024 STACKLY  News. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                    <a href="./404.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero slider
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.hero-dot');
+        let current = 0, timer;
+
+        function goTo(n) {
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+            current = (n + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        function startAuto() { timer = setInterval(() => goTo(current + 1), 6000); }
+        function resetAuto() { clearInterval(timer); startAuto(); }
+
+        document.querySelector('.next-slide').addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+        document.querySelector('.prev-slide').addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+        dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); resetAuto(); }));
+
+        startAuto();
+
+        // Sticky section headers offset
+        document.querySelectorAll('.sticky-header .section-header').forEach(h => {
+            h.style.top = '72px';
+        });
+    </script>
+</body>
+
+</html>
