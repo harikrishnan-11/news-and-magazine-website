@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - User Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Source Sans 3', sans-serif; background: #fafafa; color: #222; }
+        
+        /* Navigation Header Bar */
+        .navbar { background: #fff; border-bottom: 1px solid #eaeaea; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+        .navbar .logo h1 { font-size: 1.6rem; color: #1a1a2e; font-weight: bold; }
+        .navbar .logo span { color: #d71920; }
+        .user-menu { display: flex; align-items: center; gap: 20px; }
+        .user-menu a { color: #666; text-decoration: none; font-weight: 600; font-size: 0.95rem;}
+        .user-menu a:hover { color: #d71920; }
+        .logout-btn { padding: 8px 16px; background: #1a1a2e; color: #fff !important; border-radius: 6px; }
+        .logout-btn:hover { background: #d71920 !important; }
+
+        /* Layout Structure */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .welcome-hero { margin-bottom: 30px; }
+        .welcome-hero h2 { font-size: 2rem; margin-bottom: 5px; }
+        .welcome-hero p { color: #666; }
+
+        /* News Aggregator Feed Card Grid */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .news-card { background: #fff; border-radius: 12px; border: 1px solid #eee; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; }
+        .news-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.06); }
+        .news-img-placeholder { height: 180px; background: #e9ecef; display: flex; align-items: center; justify-content: center; color: #aaa; font-weight: bold; font-size: 1.1rem;}
+        .news-content { padding: 20px; }
+        .news-tag { display: inline-block; background: rgba(215, 25, 32, 0.1); color: #d71920; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-bottom: 12px; text-transform: uppercase; }
+        .news-content h3 { font-size: 1.25rem; margin-bottom: 10px; line-height: 1.4; color: #1a1a2e; }
+        .news-content p { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
+        .read-more { color: #d71920; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 600px) {
+            .navbar { padding: 15px; }
+            .user-menu { gap: 12px; }
+            .user-menu a { font-size: 0.85rem; }
+            .container { margin: 20px auto; }
+            .welcome-hero h2 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><h1>STACKLY<span>FEED</span></h1></div>
+        <div class="user-menu">
+            <a href="#">My Saved</a>
+            <a href="#">Preferences</a>
+            <a href="login.html" class="logout-btn">Log Out</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="welcome-hero">
+            <h2>Good Morning, Reader!</h2>
+            <p>Here is your personalized curation of daily updates based on your interests.</p>
+        </div>
+
+        <div class="news-grid">
+            <!-- Article Card 1 -->
+            <article class="news-card">
+                <div class="news-img-placeholder" style="background: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500') center/cover;">Technology</div>
+                <div class="news-content">
+                    <span class="news-tag">Technology</span>
+                    <h3>Next-Gen Cybersecurity Solutions to Look Out For in 2026</h3>
+                    <p>As remote systems shift fully toward dynamic mesh environments, threat mitigation turns heavily reliance on contextual identity engines.</p>
+                    <a href="#" class="read-more">Read Full Story &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article Card 2 -->
+            <article class="news-card">
+                <div class="news-img-placeholder" style="background: url('https://images.unsplash.com/photo-1444653389962-8149286c578a?w=500') center/cover;">Business</div>
+                <div class="news-content">
+                    <span class="news-tag">Finance</span>
+                    <h3>Global Supply Networks Shift Operations Centers Strategy</h3>
+                    <p>Economic analysts map how rapid shifts toward automated near-shore manufacturing is impacting ocean freight pipelines this fiscal year.</p>
+                    <a href="#" class="read-more">Read Full Story &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Article Card 3 -->
+            <article class="news-card">
+                <div class="news-img-placeholder" style="background: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=500') center/cover;">Lifestyle</div>
+                <div class="news-content">
+                    <span class="news-tag">Culture</span>
+                    <h3>The Creative Resurgence of Micro-Journaling Communities</h3>
+                    <p>Why digital exhaustion is sending millions of users away from massive timelines and toward miniature independent publishing clubs.</p>
+                    <a href="#" class="read-more">Read Full Story &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+</body>
+</html>

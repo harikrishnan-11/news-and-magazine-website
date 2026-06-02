@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACKLY News Stay Informed. Stay Ahead.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <!-- ========== TOP UTILITY BAR ========== -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span id="live-date"></span>
+                <span class="sep">|</span>
+                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;New York, USA</span>
+                <span class="sep">|</span>
+                <span class="breaking-ticker">
+                    <span class="breaking-label">BREAKING</span>
+                    <div class="ticker-wrap">
+                        <div class="ticker-track" id="ticker">
+                            <span>World leaders convene for emergency climate summit <span class="ticker-dot">.</span>
+                                Markets surge on strong jobs report <span class="ticker-dot">.</span> NASA announces new
+                                lunar mission date<span class="ticker-dot">.</span> Major merger shakes the tech sector
+                                <span class="ticker-dot">.</span> Championship final set for Sunday showdown <span
+                                    class="ticker-dot">.</span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="top-bar-right">
+                <a href="./404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="./404.html" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="./404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="./404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="./404.html" class="subscribe-btn">SUBSCRIBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MAIN HEADER ========== -->
+    <header class="main-header" id="main-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <h1>STACKLY </h1>
+                <p>DAILY NEWS </p>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="./index.html" class="nav-link " data-page="home">HOME</a></li>
+                    <li><a href="./world.html" class="nav-link" data-page="world">WORLD</a></li>
+                    <li><a href="./politics.html" class="nav-link" data-page="politics">POLITICS</a></li>
+                    <li><a href="./business.html" class="nav-link" data-page="business">BUSINESS</a></li>
+                    <li><a href="./technology.html" class="nav-link" data-page="technology">TECHNOLOGY</a></li>
+                    <li><a href="./sports.html" class="nav-link" data-page="sports">SPORTS</a></li>
+                    <li><a href="./lifestyle.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
+                    <li><a href="./opinion.html" class="nav-link" data-page="opinion">OPINION</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button class="ctrl-btn" id="search-btn" aria-label="Search"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="ctrl-btn" id="dark-toggle" aria-label="Toggle dark mode"><i
+                        class="fa-solid fa-moon"></i></button>
+                <button class="ctrl-btn hamburger" id="menu-toggle" aria-label="Menu" aria-controls="mobile-nav"
+                    aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+                <a href="./login.html" class="login-btn"><button>Login</button></a>
+            </div>
+        </div>
+        <!-- Search bar -->
+        <div class="search-bar" id="search-bar">
+            <div class="container">
+                <input type="text" placeholder="Search for news, topics, or reporters..." id="search-input">
+                <button id="search-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+        <!-- Mobile nav -->
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="./404.html" class="nav-link" data-page="home">HOME</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="world">WORLD</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="politics">POLITICS</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="business">BUSINESS</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="technology">TECHNOLOGY</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="sports">SPORTS</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
+                <li><a href="./404.html" class="nav-link" data-page="opinion">OPINION</a></li>
+            </ul>
+        </div>
+    </header>
+
+   <div class="login-main">
+    <div class="login-container">
+        <div class="login-card">
+
+            <h2>Welcome Back</h2>
+            <p>Sign in to continue reading the latest news.</p>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="role">Role</label>
+                    <select id="role" required>
+                        <option value="">Select Role</option>
+                        <option value="admin">Admin</option>
+                        <option value="editor">Editor</option>
+                        <option value="journalist">Journalist</option>
+                        <option value="subscriber">Subscriber</option>
+                        <option value="user">User</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-box">
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember">
+                        <input type="checkbox">
+                        <span>Remember Me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </div>
+
+                <div id="errorMsg"></div>
+
+                <button type="submit" class="login-btn1">
+                    Login
+                </button>
+
+            </form>
+
+            <div class="create-account">
+                <a href="./signup.html">
+                    Don't have an account? <strong>Create Account</strong>
+                </a>
+            </div>
+
+            <div class="divider">
+                <span>OR CONTINUE WITH</span>
+            </div>
+
+            <div class="social-login">
+                <button type="button" class="social-btn google">
+                    <i class="fa-brands fa-google"></i>
+                </button>
+                <button type="button" class="social-btn facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </button>
+                <button type="button" class="social-btn apple">
+                    <i class="fa-brands fa-apple"></i>
+                </button>
+            </div>
+
+            <div class="guest-login">
+                <a href="#">Continue as Guest</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>STACKLY <span>NEWS</span></h2>
+                <p>Delivering accurate, timely, and in-depth coverage of the stories that shape our world. Trusted by
+                    millions of readers globally.</p>
+                <div class="footer-socials">
+                    <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>SECTIONS</h4>
+                <ul>
+                    <li><a href="./404.html">World</a></li>
+                    <li><a href="./404.html">Politics</a></li>
+                    <li><a href="./404.html">Business</a></li>
+                    <li><a href="./404.html">Technology</a></li>
+                    <li><a href="./404.html">Sports</a></li>
+                    <li><a href="./404.html">Lifestyle</a></li>
+                    <li><a href="./404.html">Opinion</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="./404.html">About Us</a></li>
+                    <li><a href="./404.html">Editorial Policy</a></li>
+                    <li><a href="./404.html">Advertise</a></li>
+                    <li><a href="./404.html">Careers</a></li>
+                    <li><a href="./404.html">Contact</a></li>
+                    <li><a href="./404.html">Press Room</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>NEWSLETTER</h4>
+                <p>Get the day's top stories delivered to your inbox every morning.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>@ 2024 STACKLY News. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                    <a href="./404.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

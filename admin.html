@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 260px;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+        }
+
+        .sidebar .brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #fff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .sidebar .brand span {
+            color: #d71920;
+        }
+
+        .sidebar a {
+            color: #b8b9c0;
+            text-decoration: none;
+            padding: 12px 15px;
+            display: block;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: #d71920;
+            color: #fff;
+        }
+
+        .logout {
+            margin-top: auto;
+            background: rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Dashboard Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #d71920;
+        }
+
+        .stat-card h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+
+        /* Content Table Container */
+        .data-section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .data-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: #555;
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .badge.published {
+            background: #e6f7ed;
+            color: #1f9254;
+        }
+
+        .badge.draft {
+            background: #fff8e6;
+            color: #b78103;
+        }
+
+        /* Mobile Responsiveness Rules */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+                padding: 15px;
+            }
+
+            .sidebar .brand {
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+            }
+
+            .sidebar nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+
+            .sidebar a {
+                margin-bottom: 0;
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .logout {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="brand">STACKLY <span>ADMIN</span></div>
+        <nav>
+            <a href="#" class="active">Overview</a>
+            <a href="#">Manage Articles</a>
+            <a href="#">Users</a>
+            <a href="#">Settings</a>
+            <a href="login.html" class="logout">Logout</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Admin Control Panel</h1>
+            <div>Welcome back, <strong>Administrator</strong></div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total News Articles</h3>
+                <div class="value">1,248</div>
+            </div>
+            <div class="stat-card" style="border-left-color: #2e7d32;">
+                <h3>Active Subscribers</h3>
+                <div class="value">42.1k</div>
+            </div>
+            <div class="stat-card" style="border-left-color: #0288d1;">
+                <h3>Today's Page Views</h3>
+                <div class="value">94,520</div>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <h2>Recent Articles Queue</h2>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Headline</th>
+                            <th>Author</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Global Tech Summit 2026 Announced</td>
+                            <td>Sarah Jenkins</td>
+                            <td>June 02, 2026</td>
+                            <td><span class="badge published">Published</span></td>
+                        </tr>
+                        <tr>
+                            <td>The Rising Trends of Decentralized AI platforms</td>
+                            <td>Alex Rivera</td>
+                            <td>June 01, 2026</td>
+                            <td><span class="badge published">Published</span></td>
+                        </tr>
+                        <tr>
+                            <td>Climate Crisis Resolutions: A Closer Look at alternative energies</td>
+                            <td>David K.</td>
+                            <td>May 30, 2026</td>
+                            <td><span class="badge draft">Draft</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
