@@ -54,7 +54,12 @@ body.dark {
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Example styling for your active navigation link */
+.nav-link.active {
+    color: var(--red); /* Or your primary accent color */
+    border-bottom: 2px solid var(--red);
+    font-weight: 700;
+}
 html {
     scroll-behavior: smooth;
 }

@@ -63,3 +63,5 @@ if (searchBtn && searchClose) {
   searchBtn.addEventListener('click', toggleSearchBar);
   searchClose.addEventListener('click', closeSearchBar);
 }
+
+
