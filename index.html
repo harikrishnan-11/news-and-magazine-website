@@ -22,7 +22,7 @@
             <div class="top-bar-left">
                 <span id="live-date"></span>
                 <span class="sep">|</span>
-                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;New York, USA</span>
+                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;Chennai</span>
                 <span class="sep">|</span>
                 <span class="breaking-ticker">
                     <span class="breaking-label">BREAKING</span>
@@ -51,7 +51,7 @@
     <header class="main-header" id="main-header">
         <div class="container header-inner">
             <div class="logo">
-                <h1>STACKLY </h1>
+             <a href="./index.html"><img src="./src/logo/Untitled design (20)-compressed.webp" alt=""></a>
                 <p>DAILY NEWS </p>
             </div>
             <nav class="main-nav" id="main-nav">
@@ -1637,7 +1637,9 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <h2>STACKLY <span>NEWS</span></h2>
+               <div class="footer-logo">
+                    <a href="./index.html"><img src="./src/logo/Untitled design (20)-compressed.webp" alt=""></a>
+                </div>
                 <p>Delivering accurate, timely, and in-depth coverage of the stories that shape our world. Trusted by
                     millions of readers globally.</p>
                 <div class="footer-socials">
@@ -1675,8 +1677,11 @@
                 <h4>NEWSLETTER</h4>
                 <p>Get the day's top stories delivered to your inbox every morning.</p>
                 <div class="newsletter-form">
-                    <input type="email" placeholder="Your email address">
-                    <button>SUBSCRIBE</button>
+                    <form id="newsletter">
+                        <input type="email" id="newsLetterEmail" placeholder="Your email address" required>
+                        <button type="submit">SUBSCRIBE</button><br>
+                        <small id="emailError" class="email-error"></small>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1694,6 +1699,7 @@
 
     <script src="app.js"></script>
     <script src="./hero.js"></script>
+    <script src="./newsletter.js"></script>
 </body>
 
 </html>

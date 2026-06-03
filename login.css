@@ -23,7 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Source Sans 3', sans-serif;
-    background: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1920') center/cover no-repeat;
+    background: url('./src/photo-1504711434969-e33886168f5c-compressed.webp') center/cover no-repeat;
     position: relative;
     padding: 40px 20px;
     overflow-x: hidden;

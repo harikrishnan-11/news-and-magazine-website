@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECH NEWS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- ========== TOP UTILITY BAR ========== -->
@@ -18,13 +22,17 @@
             <div class="top-bar-left">
                 <span id="live-date"></span>
                 <span class="sep">|</span>
-                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;New York, USA</span>
+                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;Chennai</span>
                 <span class="sep">|</span>
                 <span class="breaking-ticker">
                     <span class="breaking-label">BREAKING</span>
                     <div class="ticker-wrap">
                         <div class="ticker-track" id="ticker">
-                            <span>World leaders convene for emergency climate summit <span class="ticker-dot">.</span> Markets surge on strong jobs report <span class="ticker-dot">.</span> NASA announces new lunar mission date<span class="ticker-dot">.</span> Major merger shakes the tech sector <span class="ticker-dot">.</span> Championship final set for Sunday showdown <span class="ticker-dot">.</span>
+                            <span>World leaders convene for emergency climate summit <span class="ticker-dot">.</span>
+                                Markets surge on strong jobs report <span class="ticker-dot">.</span> NASA announces new
+                                lunar mission date<span class="ticker-dot">.</span> Major merger shakes the tech sector
+                                <span class="ticker-dot">.</span> Championship final set for Sunday showdown <span
+                                    class="ticker-dot">.</span>
                         </div>
                     </div>
                 </span>
@@ -43,16 +51,16 @@
     <header class="main-header" id="main-header">
         <div class="container header-inner">
             <div class="logo">
-                <h1>STACKLY </h1>
+               <a href="./index.html"><img src="./src/logo/Untitled design (20)-compressed.webp" alt=""></a>
                 <p>DAILY NEWS </p>
             </div>
             <nav class="main-nav" id="main-nav">
                 <ul>
-                    <li><a href="./index.html" class="nav-link active" data-page="home">HOME</a></li>
+                    <li><a href="./index.html" class="nav-link " data-page="home">HOME</a></li>
                     <li><a href="./world.html" class="nav-link" data-page="world">WORLD</a></li>
                     <li><a href="./politics.html" class="nav-link" data-page="politics">POLITICS</a></li>
                     <li><a href="./business.html" class="nav-link" data-page="business">BUSINESS</a></li>
-                    <li><a href="./technology.html" class="nav-link" data-page="technology">TECHNOLOGY</a></li>
+                    <li><a href="./technology.html" class="nav-link active" data-page="technology">TECHNOLOGY</a></li>
                     <li><a href="./sports.html" class="nav-link" data-page="sports">SPORTS</a></li>
                     <li><a href="./lifestyle.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
                     <li><a href="./opinion.html" class="nav-link" data-page="opinion">OPINION</a></li>
@@ -61,9 +69,11 @@
                 </ul>
             </nav>
             <div class="header-controls">
-                <button class="ctrl-btn" id="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-                
-                <button class="ctrl-btn hamburger" id="menu-toggle" aria-label="Menu" aria-controls="mobile-nav" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+                <button class="ctrl-btn" id="search-btn" aria-label="Search"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+
+                <button class="ctrl-btn hamburger" id="menu-toggle" aria-label="Menu" aria-controls="mobile-nav"
+                    aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
                 <a href="./404.html" class="login-btn"><button>Login</button></a>
             </div>
         </div>
@@ -77,644 +87,676 @@
         <!-- Mobile nav -->
         <div class="mobile-nav" id="mobile-nav">
             <ul>
-                <li><a href="./index.html" class="nav-link active" data-page="home">HOME</a></li>
-                    <li><a href="./world.html" class="nav-link" data-page="world">WORLD</a></li>
-                    <li><a href="./politics.html" class="nav-link" data-page="politics">POLITICS</a></li>
-                    <li><a href="./business.html" class="nav-link" data-page="business">BUSINESS</a></li>
-                    <li><a href="./technology.html" class="nav-link" data-page="technology">TECHNOLOGY</a></li>
-                    <li><a href="./sports.html" class="nav-link" data-page="sports">SPORTS</a></li>
-                    <li><a href="./lifestyle.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
-                    <li><a href="./opinion.html" class="nav-link" data-page="opinion">OPINION</a></li>
-                    <li><a href="./about.html" class="nav-link" data-page="about">ABOUT</a></li>
-                    <li><a href="./contact.html" class="nav-link" data-page="contact">CONTACT</a></li>
+                <li><a href="./index.html" class="nav-link " data-page="home">HOME</a></li>
+                <li><a href="./world.html" class="nav-link" data-page="world">WORLD</a></li>
+                <li><a href="./politics.html" class="nav-link" data-page="politics">POLITICS</a></li>
+                <li><a href="./business.html" class="nav-link" data-page="business">BUSINESS</a></li>
+                <li><a href="./technology.html" class="nav-link active" data-page="technology">TECHNOLOGY</a></li>
+                <li><a href="./sports.html" class="nav-link" data-page="sports">SPORTS</a></li>
+                <li><a href="./lifestyle.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
+                <li><a href="./opinion.html" class="nav-link" data-page="opinion">OPINION</a></li>
+                <li><a href="./about.html" class="nav-link" data-page="about">ABOUT</a></li>
+                <li><a href="./contact.html" class="nav-link" data-page="contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
 
-<!-- HERO SECTION -->
-<!-- HERO SECTION -->
-<section class="hero-section">
+    <!-- HERO SECTION -->
+    <!-- HERO SECTION -->
+    <section class="hero-section">
 
-    <!-- Slide 1 -->
-    <div class="hero-slide active">
-        <img class="hero-slide-img"  src="" alt="Technology News Overview">
-        <div class="hero-overlay"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="badge-pill badge-red">BREAKTHROUGH</span>
-                <h1 class="hero-title">Artificial Intelligence Reaches New Milestone in Autonomous Learning</h1>
-                <p class="hero-desc">Researchers announce a major breakthrough in AI development that enables machines to learn and adapt independently, promising to revolutionize industries from healthcare to manufacturing and transportation.</p>
-                <div class="hero-meta">
-                    <span>TECHNOLOGY</span>
-                    <span class="sep-dot"></span>
-                    <span>June 2, 2026</span>
-                    <span class="sep-dot"></span>
-                    <span>6 Min Read</span>
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <img class="hero-slide-img" src="./src/tech/image2-compressed.webp" alt="Technology News Overview">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge-pill badge-red">BREAKTHROUGH</span>
+                    <h1 class="hero-title">Artificial Intelligence Reaches New Milestone in Autonomous Learning</h1>
+                    <p class="hero-desc">Researchers announce a major breakthrough in AI development that enables
+                        machines to learn and adapt independently, promising to revolutionize industries from healthcare
+                        to manufacturing and transportation.</p>
+                    <div class="hero-meta">
+                        <span>TECHNOLOGY</span>
+                        <span class="sep-dot"></span>
+                        <span>June 2, 2026</span>
+                        <span class="sep-dot"></span>
+                        <span>6 Min Read</span>
+                    </div>
+                    <div style="display:flex;gap:12px;">
+                        <a href="./404.html" class="btn-primary">READ STORY <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./404.html" class="btn-outline">WATCH VIDEO</a>
+                    </div>
                 </div>
-                <div style="display:flex;gap:12px;">
+
+
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <img class="hero-slide-img" src="./src/tech/image3-compressed.webp" alt="Futuristic Tech Data Visual">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge-pill badge-red">TECHNOLOGY</span>
+                    <h1 class="hero-title">Artificial Intelligence Reshaping Global Industries</h1>
+                    <p class="hero-desc">From healthcare to finance, AI is driving innovation and transforming how
+                        businesses operate worldwide.</p>
+                    <div class="hero-meta">
+                        <span>TECHNOLOGY</span>
+                        <span class="sep-dot"></span>
+                        <span>June 1, 2026</span>
+                        <span class="sep-dot"></span>
+                        <span>7 Min Read</span>
+                    </div>
                     <a href="./404.html" class="btn-primary">READ STORY <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="./404.html" class="btn-outline">WATCH VIDEO</a>
                 </div>
             </div>
-
-          
         </div>
-    </div>
 
-    <!-- Slide 2 -->
-    <div class="hero-slide">
-        <img class="hero-slide-img"  src="" alt="Futuristic Tech Data Visual">
-        <div class="hero-overlay"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="badge-pill badge-red">TECHNOLOGY</span>
-                <h1 class="hero-title">Artificial Intelligence Reshaping Global Industries</h1>
-                <p class="hero-desc">From healthcare to finance, AI is driving innovation and transforming how businesses operate worldwide.</p>
-                <div class="hero-meta">
-                    <span>TECHNOLOGY</span>
-                    <span class="sep-dot"></span>
-                    <span>June 1, 2026</span>
-                    <span class="sep-dot"></span>
-                    <span>7 Min Read</span>
+
+
+        <!-- Controls -->
+        <div class="hero-controls">
+            <button class="hero-nav-btn prev-slide" aria-label="Previous Slide"><i
+                    class="fa-solid fa-chevron-left"></i></button>
+            <div class="hero-dots">
+                <span class="hero-dot active"></span>
+                <span class="hero-dot"></span>
+            </div>
+            <button class="hero-nav-btn next-slide" aria-label="Next Slide"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="section-wrap">
+        <div class="container">
+            <div class="home-main-grid">
+
+                <!-- LEFT CONTENT -->
+                <div class="home-content">
+
+
+
+                    <!-- LATEST NEWS -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>LATEST NEWS</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="cards-grid-3">
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image4-compressed.webp" alt="Person Interacting with Digital AI Graphics">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">TECHNOLOGY</span>
+                                        <span class="time">2 Hours Ago</span>
+                                    </div>
+                                    <h3>AI Innovation Continues To Transform Business Operations</h3>
+                                    <p>Companies increasingly adopt intelligent automation to improve productivity
+                                        across common enterprise operations.</p>
+                                </div>
+                            </article>
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image5-compressed.webp" alt="Slim Notebook Open on Desk">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">LAPTOPS</span>
+                                    </div>
+                                    <h3>ARM Architecture Drives Massive Notebook Battery Upgrades</h3>
+                                    <p>Testing showcases thin form-factor consumer laptops clearing 24 hours of standard
+                                        playback seamlessly.</p>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- ===== ARTIFICIAL INTELLIGENCE ===== -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>ARTIFICIAL INTELLIGENCE</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image6-compressed.webp" alt="Neural Networking Node Design">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">DEEP LEARNING</span>
+                                    </div>
+                                    <h3>New Transformers Architecture Halves Training Costs</h3>
+                                    <p>AI firms deploy a new algorithm architecture that reduces infrastructure cloud
+                                        requirements dramatically.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image7-compressed.webp" alt="Robot Hand Touching Human Hand">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">ROBOTICS</span>
+                                    </div>
+                                    <h3>Vision-Language Models Upgrade Factory Automation</h3>
+                                    <p>Industrial robotic systems show significant dexterity gains after processing
+                                        multi-modal feedback models.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image9-compressed.webp" alt="Digital Code Script Visualization">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">ETHICS</span>
+                                    </div>
+                                    <h3>Global Standards Body Issues AI Safety Rules</h3>
+                                    <p>New multi-national frameworks outline tracking benchmarks to mitigate synthetic
+                                        content risks.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- ===== MOBILES AND LAPTOPS ===== -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>MOBILES AND LAPTOPS</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image10-compressed.webp" alt="Smartphone Dynamic Display Panel">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">SMARTPHONES</span>
+                                    </div>
+                                    <h3>Next-Gen Handsets Standardize Onboard AI Hardware</h3>
+                                    <p>Leading manufacturers reveal premium flagship phones featuring standalone
+                                        processors for localized processing.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image13-compressed.webp" alt="Slim Notebook Open on Desk">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">LAPTOPS</span>
+                                    </div>
+                                    <h3>ARM Architecture Drives Massive Notebook Battery Upgrades</h3>
+                                    <p>Testing showcases thin form-factor consumer laptops clearing 24 hours of standard
+                                        playback seamlessly.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image11-compressed.webp" alt="Foldable Mobile Device">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">HARDWARE INN</span>
+                                    </div>
+                                    <h3>Foldable Displays Drop in Production Complexity</h3>
+                                    <p>Supply chain upgrades lower baseline entry costs for flexible screen assemblies
+                                        this hardware cycle.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- ===== COMPUTER HARDWARE ===== -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>COMPUTER HARDWARE</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image12-compressed.webp" alt="Silicone Wafer Foundry Layer">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">FOUNDRIES</span>
+                                    </div>
+                                    <h3>2nm Manufacturing Foundries Enter Initial Trial Production</h3>
+                                    <p>Leading microchip foundries report promising wafer yield outputs, paving the way
+                                        for next-year chips.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image14-compressed.webp" alt="Desktop PC Cooling Fans Layout">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">DESKTOPS</span>
+                                    </div>
+                                    <h3>Liquid Cooling Innovations Adopted by Enterprise Server Stacks</h3>
+                                    <p>Data center properties modify thermal routing mechanisms to handle dense server
+                                        processing clusters.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image15-compressed.webp" alt="Solid State Storage Circuitry">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">STORAGE</span>
+                                    </div>
+                                    <h3>PCIe Gen 6 Storage Units Hit Retail Shelves</h3>
+                                    <p>Consumer data read and write rates jump forward, heavily minimizing game and
+                                        media rendering bottlenecks.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- ===== SOFTWARE ===== -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>SOFTWARE</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image16-compressed.webp" alt="Development Code Monitor Screen">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">DEV TOOLS</span>
+                                    </div>
+                                    <h3>Open Source Framework Simplifies Microservice Deployments</h3>
+                                    <p>Cloud engineers rapidly adopt the new architecture utility to orchestrate
+                                        container nodes with ease.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image17-compressed.webp" alt="Vector Database Concept Icon">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">DATABASES</span>
+                                    </div>
+                                    <h3>Vector Database Platforms Scale Up Real-Time Queries</h3>
+                                    <p>Infrastructure updates allow faster search indexing operations over unstructured
+                                        company information pools.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image18-compressed.webp" alt="Secure Encryption Shield Digital Graphic">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-technology">CYBERSECURITY</span>
+                                    </div>
+                                    <h3>Zero-Trust Access Tool Enhances Secure Engineering Workspace</h3>
+                                    <p>IT management platforms introduce identity layers to cleanly isolate legacy
+                                        enterprise networking structures.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- ===== SPACE TECH ===== -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>SPACE TECH</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image19-compressed.webp" alt="Rocket Launch Smoke Columns">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-sports">AEROSPACE</span>
+                                    </div>
+                                    <h3>Reusable Engine Assets Clear Secondary Stage Launches</h3>
+                                    <p>Private launch complexes successfully return deep-space booster frames directly
+                                        onto maritime ocean platforms.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image20-compressed.webp" alt="Satellite Array in Deep Orbit">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-sports">ORBITAL NET</span>
+                                    </div>
+                                    <h3>Low Earth Satellites Increase Remote Broadband Capacities</h3>
+                                    <p>New telemetry routing expands digital connection capabilities to high-altitude
+                                        and marine navigation zones.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image21-compressed.webp" alt="Space Rover Machinery Core">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-sports">EXPLORATION</span>
+                                    </div>
+                                    <h3>Martian Core Profiling Uncovers Subsurface Ice Strata</h3>
+                                    <p>Geological telemetry sensors transmit rich geological profiles indicating
+                                        accessible ice deposits near the planet equator.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- ===== SOCIAL MEDIA ===== -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>SOCIAL MEDIA</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image22-compressed.webp" alt="Mobile App Screen Interface Feed">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-lifestyle">NETWORKS</span>
+                                    </div>
+                                    <h3>Decentralized Social Networks Gain Global Adoption</h3>
+                                    <p>Open protocol registries report user expansions as consumers prefer independent
+                                        data storage policies.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image23-compressed.webp" alt="Content Creation Studio Equipment">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-lifestyle">CREATOR ECON</span>
+                                    </div>
+                                    <h3>Direct Fan Monetization Overhears Standard Brand Advertisements</h3>
+                                    <p>Platform metrics indicate creator operations are generating more profit directly
+                                        through native premium communities.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image21-compressed.webp" alt="Data Compliance Policy Documents">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-lifestyle">REGULATION</span>
+                                    </div>
+                                    <h3>Algorithmic Discovery Audits Initiated by Regulatory Boards</h3>
+                                    <p>New international compliance provisions dictate transparent reporting rules on
+                                        targeted discovery mechanics.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- ===== AUTOMOTIVE ===== -->
+                    <div class="section-wrap sticky-header">
+                        <div class="section-header">
+                            <h2>AUTOMOTIVE</h2>
+                            <a href="./404.html" class="view-all-link">VIEW ALL <i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="cards-grid-3">
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image24-compressed.webp" alt="Electric Car Charging Cable Close-Up">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-opinion">ELECTRIC VEHICLES</span>
+                                    </div>
+                                    <h3>Solid-State Batteries Enter Pilot Manufacturing Stages</h3>
+                                    <p>Automotive alliances verify prototype vehicle structures achieving double the
+                                        energy density of legacy platforms.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image25-compressed.webp" alt="Autonomous Car Sensing Lidar Visual">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-opinion">AUTONOMY</span>
+                                    </div>
+                                    <h3>Level 4 Driving Approvals Granted to Logistics Networks</h3>
+                                    <p>Freight transport lanes authorize freight trucks to manage long-haul freeway
+                                        routes without backup pilots.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card">
+                                <div class="card-image">
+                                    <img src="./src/tech/image26-compressed.webp" alt="Car Plant Assembly Conveyor">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-meta">
+                                        <span class="cat-label cat-opinion">MANUFACTURING</span>
+                                    </div>
+                                    <h3>Gigacasting Frameworks Drop Automotive Component Counts</h3>
+                                    <p>Automotive groups deploy high-pressure metal casting rigs to unify complex
+                                        unibody vehicle chassis structures cleanly.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
-                <a href="./404.html" class="btn-primary">READ STORY <i class="fa-solid fa-arrow-right"></i></a>
+
+                <!-- RIGHT SIDEBAR -->
+                <aside class="home-sidebar">
+                    <h3>TRENDING IN TECHNOLOGIES</h3>
+
+                    <div class="trending-item">
+                        <div class="trending-num">01</div>
+                        <div class="trending-text">
+                            <h4>Tech Giants Form Alliance to Establish Open AI Safety Benchmarks</h4>
+                            <div class="time">20 mins ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">02</div>
+                        <div class="trending-text">
+                            <h4>Next-Generation Quantum Chips Achieve Error-Correction Milestone</h4>
+                            <div class="time">1 hour ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">03</div>
+                        <div class="trending-text">
+                            <h4>Global Smartphone Shipments Surge as On-Device AI Becomes Standard</h4>
+                            <div class="time">2 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">04</div>
+                        <div class="trending-text">
+                            <h4>Critical Zero-Day Vulnerability Discovered in Major Cloud Framework</h4>
+                            <div class="time">3 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">05</div>
+                        <div class="trending-text">
+                            <h4>Private Aerospace Startup Successfully Launches Deep-Space Telemetry Satellite</h4>
+                            <div class="time">5 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">06</div>
+                        <div class="trending-text">
+                            <h4>Automotive Leaders Unveil Solid-State Battery with 600-Mile Range</h4>
+                            <div class="time">6 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">07</div>
+                        <div class="trending-text">
+                            <h4>Open-Source Machine Learning Framework Slashes Model Training Costs by Half</h4>
+                            <div class="time">7 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">08</div>
+                        <div class="trending-text">
+                            <h4>Major Tech Hubs Move Toward 2nm Semiconductor Manufacturing Ramps</h4>
+                            <div class="time">8 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">09</div>
+                        <div class="trending-text">
+                            <h4>Decentralized Social Protocols Report Record Growth in Active Users</h4>
+                            <div class="time">9 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">10</div>
+                        <div class="trending-text">
+                            <h4>E-Commerce Stacks Experience Massive Shift Toward Multi-Modal Search Engines</h4>
+                            <div class="time">10 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">11</div>
+                        <div class="trending-text">
+                            <h4>New Vision-Language Models Upgrade Industrial Assembly Line Robotics</h4>
+                            <div class="time">11 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">12</div>
+                        <div class="trending-text">
+                            <h4>Consumer Notebooks Clear 24-Hour Battery Life Barrier via ARM Architecture</h4>
+                            <div class="time">12 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">13</div>
+                        <div class="trending-text">
+                            <h4>Regulatory Bodies Launch Formal Audits on Algorithmic Content Feeds</h4>
+                            <div class="time">13 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">14</div>
+                        <div class="trending-text">
+                            <h4>PCIe Gen 6 Storage Drives Hit Retail Shelves with Blazing Transfer Speeds</h4>
+                            <div class="time">14 hours ago</div>
+                        </div>
+                    </div>
+
+                    <div class="trending-item">
+                        <div class="trending-num">15</div>
+                        <div class="trending-text">
+                            <h4>IT Networks Accelerate Transition to Strict Zero-Trust Security Models</h4>
+                            <div class="time">15 hours ago</div>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
-    </div>
+    </section>
 
-   
-
-    <!-- Controls -->
-    <div class="hero-controls">
-        <button class="hero-nav-btn prev-slide" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
-        <div class="hero-dots">
-            <span class="hero-dot active"></span>
-            <span class="hero-dot"></span>
-        </div>
-        <button class="hero-nav-btn next-slide" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
-    </div>
-</section>
-
-<!-- MAIN CONTENT -->
-<section class="section-wrap">
-    <div class="container">
-        <div class="home-main-grid">
-
-            <!-- LEFT CONTENT -->
-            <div class="home-content">
-
-             
-
-                <!-- LATEST NEWS -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>LATEST NEWS</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-
-                    <div class="cards-grid-3">
-              
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Person Interacting with Digital AI Graphics">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">TECHNOLOGY</span>
-                                    <span class="time">2 Hours Ago</span>
-                                </div>
-                                <h3>AI Innovation Continues To Transform Business Operations</h3>
-                                <p>Companies increasingly adopt intelligent automation to improve productivity across common enterprise operations.</p>
-                            </div>
-                        </article>
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Slim Notebook Open on Desk">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">LAPTOPS</span>
-                                </div>
-                                <h3>ARM Architecture Drives Massive Notebook Battery Upgrades</h3>
-                                <p>Testing showcases thin form-factor consumer laptops clearing 24 hours of standard playback seamlessly.</p>
-                            </div>
-                        </article>
-                     
-                    </div>
-                </div>
-
-                <!-- ===== ARTIFICIAL INTELLIGENCE ===== -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>ARTIFICIAL INTELLIGENCE</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="cards-grid-3">
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Neural Networking Node Design">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">DEEP LEARNING</span>
-                                </div>
-                                <h3>New Transformers Architecture Halves Training Costs</h3>
-                                <p>AI firms deploy a new algorithm architecture that reduces infrastructure cloud requirements dramatically.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Robot Hand Touching Human Hand">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">ROBOTICS</span>
-                                </div>
-                                <h3>Vision-Language Models Upgrade Factory Automation</h3>
-                                <p>Industrial robotic systems show significant dexterity gains after processing multi-modal feedback models.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Digital Code Script Visualization">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">ETHICS</span>
-                                </div>
-                                <h3>Global Standards Body Issues AI Safety Rules</h3>
-                                <p>New multi-national frameworks outline tracking benchmarks to mitigate synthetic content risks.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- ===== MOBILES AND LAPTOPS ===== -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>MOBILES AND LAPTOPS</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="cards-grid-3">
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Smartphone Dynamic Display Panel">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">SMARTPHONES</span>
-                                </div>
-                                <h3>Next-Gen Handsets Standardize Onboard AI Hardware</h3>
-                                <p>Leading manufacturers reveal premium flagship phones featuring standalone processors for localized processing.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Slim Notebook Open on Desk">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">LAPTOPS</span>
-                                </div>
-                                <h3>ARM Architecture Drives Massive Notebook Battery Upgrades</h3>
-                                <p>Testing showcases thin form-factor consumer laptops clearing 24 hours of standard playback seamlessly.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Foldable Mobile Device">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">HARDWARE INN</span>
-                                </div>
-                                <h3>Foldable Displays Drop in Production Complexity</h3>
-                                <p>Supply chain upgrades lower baseline entry costs for flexible screen assemblies this hardware cycle.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- ===== COMPUTER HARDWARE ===== -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>COMPUTER HARDWARE</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="cards-grid-3">
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Silicone Wafer Foundry Layer">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">FOUNDRIES</span>
-                                </div>
-                                <h3>2nm Manufacturing Foundries Enter Initial Trial Production</h3>
-                                <p>Leading microchip foundries report promising wafer yield outputs, paving the way for next-year chips.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Desktop PC Cooling Fans Layout">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">DESKTOPS</span>
-                                </div>
-                                <h3>Liquid Cooling Innovations Adopted by Enterprise Server Stacks</h3>
-                                <p>Data center properties modify thermal routing mechanisms to handle dense server processing clusters.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Solid State Storage Circuitry">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">STORAGE</span>
-                                </div>
-                                <h3>PCIe Gen 6 Storage Units Hit Retail Shelves</h3>
-                                <p>Consumer data read and write rates jump forward, heavily minimizing game and media rendering bottlenecks.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- ===== SOFTWARE ===== -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>SOFTWARE</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="cards-grid-3">
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Development Code Monitor Screen">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">DEV TOOLS</span>
-                                </div>
-                                <h3>Open Source Framework Simplifies Microservice Deployments</h3>
-                                <p>Cloud engineers rapidly adopt the new architecture utility to orchestrate container nodes with ease.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Vector Database Concept Icon">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">DATABASES</span>
-                                </div>
-                                <h3>Vector Database Platforms Scale Up Real-Time Queries</h3>
-                                <p>Infrastructure updates allow faster search indexing operations over unstructured company information pools.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Secure Encryption Shield Digital Graphic">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-technology">CYBERSECURITY</span>
-                                </div>
-                                <h3>Zero-Trust Access Tool Enhances Secure Engineering Workspace</h3>
-                                <p>IT management platforms introduce identity layers to cleanly isolate legacy enterprise networking structures.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- ===== SPACE TECH ===== -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>SPACE TECH</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="cards-grid-3">
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Rocket Launch Smoke Columns">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-sports">AEROSPACE</span>
-                                </div>
-                                <h3>Reusable Engine Assets Clear Secondary Stage Launches</h3>
-                                <p>Private launch complexes successfully return deep-space booster frames directly onto maritime ocean platforms.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Satellite Array in Deep Orbit">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-sports">ORBITAL NET</span>
-                                </div>
-                                <h3>Low Earth Satellites Increase Remote Broadband Capacities</h3>
-                                <p>New telemetry routing expands digital connection capabilities to high-altitude and marine navigation zones.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Space Rover Machinery Core">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-sports">EXPLORATION</span>
-                                </div>
-                                <h3>Martian Core Profiling Uncovers Subsurface Ice Strata</h3>
-                                <p>Geological telemetry sensors transmit rich geological profiles indicating accessible ice deposits near the planet equator.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- ===== SOCIAL MEDIA ===== -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>SOCIAL MEDIA</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="cards-grid-3">
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Mobile App Screen Interface Feed">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-lifestyle">NETWORKS</span>
-                                </div>
-                                <h3>Decentralized Social Networks Gain Global Adoption</h3>
-                                <p>Open protocol registries report user expansions as consumers prefer independent data storage policies.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Content Creation Studio Equipment">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-lifestyle">CREATOR ECON</span>
-                                </div>
-                                <h3>Direct Fan Monetization Overhears Standard Brand Advertisements</h3>
-                                <p>Platform metrics indicate creator operations are generating more profit directly through native premium communities.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Data Compliance Policy Documents">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-lifestyle">REGULATION</span>
-                                </div>
-                                <h3>Algorithmic Discovery Audits Initiated by Regulatory Boards</h3>
-                                <p>New international compliance provisions dictate transparent reporting rules on targeted discovery mechanics.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <!-- ===== AUTOMOTIVE ===== -->
-                <div class="section-wrap sticky-header">
-                    <div class="section-header">
-                        <h2>AUTOMOTIVE</h2>
-                        <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                    <div class="cards-grid-3">
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Electric Car Charging Cable Close-Up">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-opinion">ELECTRIC VEHICLES</span>
-                                </div>
-                                <h3>Solid-State Batteries Enter Pilot Manufacturing Stages</h3>
-                                <p>Automotive alliances verify prototype vehicle structures achieving double the energy density of legacy platforms.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Autonomous Car Sensing Lidar Visual">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-opinion">AUTONOMY</span>
-                                </div>
-                                <h3>Level 4 Driving Approvals Granted to Logistics Networks</h3>
-                                <p>Freight transport lanes authorize freight trucks to manage long-haul freeway routes without backup pilots.</p>
-                            </div>
-                        </article>
-
-                        <article class="news-card">
-                            <div class="card-image">
-                                <img  src="" alt="Car Plant Assembly Conveyor">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-meta">
-                                    <span class="cat-label cat-opinion">MANUFACTURING</span>
-                                </div>
-                                <h3>Gigacasting Frameworks Drop Automotive Component Counts</h3>
-                                <p>Automotive groups deploy high-pressure metal casting rigs to unify complex unibody vehicle chassis structures cleanly.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+    <!-- ===== SPACE & ROCKET ===== -->
+    <section class="section-wrap sticky-header">
+        <div class="container">
+            <div class="section-header">
+                <h2>SPACE & ROCKET</h2>
+                <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- RIGHT SIDEBAR -->
-            <aside class="home-sidebar">
-    <h3>TRENDING IN TECHNOLOGIES</h3>
-
-    <div class="trending-item">
-        <div class="trending-num">01</div>
-        <div class="trending-text">
-            <h4>Tech Giants Form Alliance to Establish Open AI Safety Benchmarks</h4>
-            <div class="time">20 mins ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">02</div>
-        <div class="trending-text">
-            <h4>Next-Generation Quantum Chips Achieve Error-Correction Milestone</h4>
-            <div class="time">1 hour ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">03</div>
-        <div class="trending-text">
-            <h4>Global Smartphone Shipments Surge as On-Device AI Becomes Standard</h4>
-            <div class="time">2 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">04</div>
-        <div class="trending-text">
-            <h4>Critical Zero-Day Vulnerability Discovered in Major Cloud Framework</h4>
-            <div class="time">3 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">05</div>
-        <div class="trending-text">
-            <h4>Private Aerospace Startup Successfully Launches Deep-Space Telemetry Satellite</h4>
-            <div class="time">5 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">06</div>
-        <div class="trending-text">
-            <h4>Automotive Leaders Unveil Solid-State Battery with 600-Mile Range</h4>
-            <div class="time">6 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">07</div>
-        <div class="trending-text">
-            <h4>Open-Source Machine Learning Framework Slashes Model Training Costs by Half</h4>
-            <div class="time">7 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">08</div>
-        <div class="trending-text">
-            <h4>Major Tech Hubs Move Toward 2nm Semiconductor Manufacturing Ramps</h4>
-            <div class="time">8 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">09</div>
-        <div class="trending-text">
-            <h4>Decentralized Social Protocols Report Record Growth in Active Users</h4>
-            <div class="time">9 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">10</div>
-        <div class="trending-text">
-            <h4>E-Commerce Stacks Experience Massive Shift Toward Multi-Modal Search Engines</h4>
-            <div class="time">10 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">11</div>
-        <div class="trending-text">
-            <h4>New Vision-Language Models Upgrade Industrial Assembly Line Robotics</h4>
-            <div class="time">11 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">12</div>
-        <div class="trending-text">
-            <h4>Consumer Notebooks Clear 24-Hour Battery Life Barrier via ARM Architecture</h4>
-            <div class="time">12 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">13</div>
-        <div class="trending-text">
-            <h4>Regulatory Bodies Launch Formal Audits on Algorithmic Content Feeds</h4>
-            <div class="time">13 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">14</div>
-        <div class="trending-text">
-            <h4>PCIe Gen 6 Storage Drives Hit Retail Shelves with Blazing Transfer Speeds</h4>
-            <div class="time">14 hours ago</div>
-        </div>
-    </div>
-
-    <div class="trending-item">
-        <div class="trending-num">15</div>
-        <div class="trending-text">
-            <h4>IT Networks Accelerate Transition to Strict Zero-Trust Security Models</h4>
-            <div class="time">15 hours ago</div>
-        </div>
-    </div>
-</aside>
-        </div>
-    </div>
-</section>
-
-<!-- ===== SPACE & ROCKET ===== -->
-<section class="section-wrap sticky-header">
-    <div class="container">
-        <div class="section-header">
-            <h2>SPACE & ROCKET</h2>
-            <a href="./404.html" class="view-all-link">VIEW ALL <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-
-        <div class="top-story-grid">
-            <article class="top-story-large">
-                <img  src="" alt="Deep Space Launch Vehicles Base">
-                <div class="top-story-overlay">
-                    <span class="badge-pill badge-red">PROPULSION</span>
-                    <h2>Next-Gen Cryogenic Engine Core Clears Maximum Burn Benchmarks</h2>
-                    <div class="time">Editorial · 40 mins ago</div>
-                </div>
-            </article>
-
-            <div class="top-story-stack">
-                <article class="top-story-small">
-                    <img  src="" alt="Deep Orbit Telescope Relay Array">
+            <div class="top-story-grid">
+                <article class="top-story-large">
+                    <img src="./src/tech/image28-compressed.webp" alt="Deep Space Launch Vehicles Base">
                     <div class="top-story-overlay">
-                        <span class="badge-pill badge-black">ORBITAL VIEW</span>
-                        <h2>Deep Orbit Telescope Detects Atmospheres on Close Exo-Planets</h2>
-                        <div class="time">2 hours ago</div>
+                        <span class="badge-pill badge-red">PROPULSION</span>
+                        <h2>Next-Gen Cryogenic Engine Core Clears Maximum Burn Benchmarks</h2>
+                        <div class="time">Editorial · 40 mins ago</div>
                     </div>
                 </article>
 
-                <article class="top-story-small">
-                    <img  src="" alt="Lunar Habitation Settlement Render">
-                    <div class="top-story-overlay">
-                        <span class="badge-pill badge-black">LUNAR BASES</span>
-                        <h2>Structural Engineers Complete Designs for Permanent Lunar Outposts</h2>
-                        <div class="time">3 hours ago</div>
-                    </div>
-                </article>
+                <div class="top-story-stack">
+                    <article class="top-story-small">
+                        <img src="./src/tech/image29-compressed.webp" alt="Deep Orbit Telescope Relay Array">
+                        <div class="top-story-overlay">
+                            <span class="badge-pill badge-black">ORBITAL VIEW</span>
+                            <h2>Deep Orbit Telescope Detects Atmospheres on Close Exo-Planets</h2>
+                            <div class="time">2 hours ago</div>
+                        </div>
+                    </article>
+
+                   
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <h2>STACKLY   <span>NEWS</span></h2>
-                <p>Delivering accurate, timely, and in-depth coverage of the stories that shape our world. Trusted by millions of readers globally.</p>
+               <div class="footer-logo">
+                    <a href="./index.html"><img src="./src/logo/Untitled design (20)-compressed.webp" alt=""></a>
+                </div>
+                <p>Delivering accurate, timely, and in-depth coverage of the stories that shape our world. Trusted by
+                    millions of readers globally.</p>
                 <div class="footer-socials">
                     <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
@@ -750,14 +792,17 @@
                 <h4>NEWSLETTER</h4>
                 <p>Get the day's top stories delivered to your inbox every morning.</p>
                 <div class="newsletter-form">
-                    <input type="email" placeholder="Your email address">
-                    <button>SUBSCRIBE</button>
+                    <form id="newsletter">
+                        <input type="email" id="newsLetterEmail" placeholder="Your email address" required>
+                        <button type="submit">SUBSCRIBE</button><br>
+                        <small id="emailError" class="email-error"></small>
+                    </form>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container footer-bottom-inner">
-                <span>@ 2024 STACKLY  News. All rights reserved.</span>
+                <span>@ 2024 STACKLY News. All rights reserved.</span>
                 <div class="footer-links">
                     <a href="./404.html">Privacy Policy</a>
                     <a href="./404.html">Terms of Service</a>
@@ -769,6 +814,7 @@
 
     <script src="app.js"></script>
     <script src="./hero.js"></script>
+    <script src="./newsletter.js"></script>
 </body>
-</html>
 
+</html>

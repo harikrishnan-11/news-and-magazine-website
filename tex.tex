@@ -1,29 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./about.css">
-</head>
-
-<body>
-
     <!-- ========== TOP UTILITY BAR ========== -->
     <div class="top-bar">
         <div class="container top-bar-inner">
             <div class="top-bar-left">
                 <span id="live-date"></span>
                 <span class="sep">|</span>
-                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;Chennai</span>
+                <span><i class="fa-solid fa-cloud-sun"></i> 24 <sup>o</sup>C &nbsp;New York, USA</span>
                 <span class="sep">|</span>
                 <span class="breaking-ticker">
                     <span class="breaking-label">BREAKING</span>
@@ -52,8 +33,8 @@
     <header class="main-header" id="main-header">
         <div class="container header-inner">
             <div class="logo">
-                <a href="./index.html"><img src="./src/logo/Untitled design (20)-compressed.webp" alt=""></a>
-               
+                <a href="./index.html"><h1>STACKLY </h1></a>
+                <p>DAILY NEWS </p>
             </div>
             <nav class="main-nav" id="main-nav">
                 <ul>
@@ -66,15 +47,16 @@
                     <li><a href="./lifestyle.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
                     <li><a href="./opinion.html" class="nav-link" data-page="opinion">OPINION</a></li>
                     <li><a href="./about.html" class="nav-link active" data-page="about">ABOUT</a></li>
-                    <li><a href="./contact.html" class="nav-link" data-page="contact">CONTACT</a></li>
+                <li><a href="./contact.html" class="nav-link" data-page="contact">CONTACT</a></li>
                 </ul>
             </nav>
             <div class="header-controls">
                 <button class="ctrl-btn" id="search-btn" aria-label="Search"><i
                         class="fa-solid fa-magnifying-glass"></i></button>
+                
                 <button class="ctrl-btn hamburger" id="menu-toggle" aria-label="Menu" aria-controls="mobile-nav"
                     aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-                <a href="./404.html" class="login-btn"><button>Login</button></a>
+                <a href="./login.html" class="login-btn"><button>Login</button></a>
             </div>
         </div>
         <!-- Search bar -->
@@ -96,12 +78,10 @@
                 <li><a href="./lifestyle.html" class="nav-link" data-page="lifestyle">LIFESTYLE</a></li>
                 <li><a href="./opinion.html" class="nav-link" data-page="opinion">OPINION</a></li>
                 <li><a href="./about.html" class="nav-link active" data-page="about">ABOUT</a></li>
-                <li><a href="./contact.html" class="nav-link" data-page="contact">CONTACT</a></li>
+                <li><a href="./contact.html" class="nav-link " data-page="contact">CONTACT</a></li>
             </ul>
         </div>
     </header>
-  
-   
 
 <section class="about-hero">
         <div class="hero-overlay"></div>
@@ -295,75 +275,3 @@
             <a href="./404.html" class="cta-btn">Subscribe Now</a>
         </div>
     </section>
-    <!-- ========== FOOTER ========== -->
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <a href="./index.html"><img src="./src/logo/Untitled design (20)-compressed.webp" alt=""></a>
-                </div>
-                <p>Delivering accurate, timely, and in-depth coverage of the stories that shape our world. Trusted by
-                    millions of readers globally.</p>
-                <div class="footer-socials">
-                    <a href="./404.html"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="./404.html"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="./404.html"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="./404.html"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="./404.html"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>SECTIONS</h4>
-                <ul>
-                    <li><a href="./404.html">World</a></li>
-                    <li><a href="./404.html">Politics</a></li>
-                    <li><a href="./404.html">Business</a></li>
-                    <li><a href="./404.html">Technology</a></li>
-                    <li><a href="./404.html">Sports</a></li>
-                    <li><a href="./404.html">Lifestyle</a></li>
-                    <li><a href="./404.html">Opinion</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>COMPANY</h4>
-                <ul>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./404.html">Editorial Policy</a></li>
-                    <li><a href="./404.html">Advertise</a></li>
-                    <li><a href="./404.html">Careers</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./404.html">Press Room</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>NEWSLETTER</h4>
-                <p>Get the day's top stories delivered to your inbox every morning.</p>
-                <div class="newsletter-form">
-                    <form id="newsletter">
-                        <input type="email" id="newsLetterEmail" placeholder="Your email address" required>
-                        <button type="submit">SUBSCRIBE</button><br>
-                        <small id="emailError" class="email-error"></small>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom"> 
-            <div class="container footer-bottom-inner">
-                <span>@ 2024 STACKLY News. All rights reserved.</span>
-                <div class="footer-links">
-                    <a href="./404.html">Privacy Policy</a>
-                    <a href="./404.html">Terms of Service</a>
-                    <a href="./404.html">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./app.js"></script>
-    <script src="./hero.js"></script>
-    <script src="./counter.js"></script>
-    <script src="./reveal.js"></script>
-    <script src="./newsletter.js"></script>
-</body>
-
-</html>

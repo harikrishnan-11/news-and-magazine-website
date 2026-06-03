@@ -28,27 +28,6 @@
     --radius: 3px;
 }
 
-/* Base Resets */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: var(--font-sans);
-    background-color: var(--card-bg);
-    color: var(--text);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* Global Grid Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
 
 .about-section {
     padding: 90px 0;
@@ -84,7 +63,11 @@ body {
 }
 
 /* Typography Overrides */
-p {
+.about-section p,
+.story-content p,
+.coverage-card p,
+.value-card p,
+.mission-card p {
     margin-bottom: 1.2rem;
     color: var(--text-light);
     font-size: 1.05rem;
