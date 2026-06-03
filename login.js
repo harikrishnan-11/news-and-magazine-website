@@ -8,8 +8,14 @@ const emailInput = document.getElementById("email");
 window.addEventListener("DOMContentLoaded", () => {
     const savedEmail = localStorage.getItem("userEmail");
 
-    if (savedEmail) {
+    // Prevent [object HTMLInputElement] from appearing
+    if (
+        savedEmail &&
+        savedEmail !== "[object HTMLInputElement]"
+    ) {
         emailInput.value = savedEmail;
+    } else {
+        localStorage.removeItem("userEmail");
     }
 });
 
@@ -17,11 +23,11 @@ window.addEventListener("DOMContentLoaded", () => {
 if (togglePassword) {
     togglePassword.addEventListener("click", () => {
         const type =
-            passwordInput.getAttribute("type") === "password"
+            passwordInput.type === "password"
                 ? "text"
                 : "password";
 
-        passwordInput.setAttribute("type", type);
+        passwordInput.type = type;
 
         togglePassword.innerHTML =
             type === "password"
@@ -31,51 +37,52 @@ if (togglePassword) {
 }
 
 // Form Submission
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    const role = document.getElementById("role").value;
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
+        const role = document.getElementById("role").value;
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
 
-    // Email Validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.(com|in)$/i;
+        // Clear previous error
+        errorMsg.textContent = "";
 
-    if (!emailPattern.test(email)) {
-        errorMsg.textContent =
-            "Please enter a valid email address ending with .com or .in";
-        return;
-    }
+        // Email Validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.(com|in)$/i;
 
-    // Password Validation
-    if (password.length < 6) {
-        errorMsg.textContent =
-            "Password must be at least 6 characters long.";
-        return;
-    }
+        if (!emailPattern.test(email)) {
+            errorMsg.textContent =
+                "Please enter a valid email address ending with .com or .in";
+            return;
+        }
 
-    // Role Validation
-    if (role === "") {
-        errorMsg.textContent = "Please select a role.";
-        return;
-    }
+        // Password Validation
+        if (password.length < 6) {
+            errorMsg.textContent =
+                "Password must be at least 6 characters long.";
+            return;
+        }
 
-    errorMsg.textContent = "";
+        // Role Validation
+        if (!role) {
+            errorMsg.textContent = "Please select a role.";
+            return;
+        }
 
-    // Store User Data
-    localStorage.setItem("userEmail", email);
-    localStorage.setItem("userRole", role);
+        // Save user data
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userRole", role);
+        localStorage.setItem(
+            "loginTime",
+            new Date().toLocaleString()
+        );
 
-    // Optional Login Timestamp
-    localStorage.setItem("loginTime", new Date().toLocaleString());
-
-    // Redirect Based on Role
-    if (role === "admin") {
-        window.location.href = "admin.html";
-    } else if (role === "user") {
-        window.location.href = "user.html";
-    }
-});
-
-// Save email only
-localStorage.setItem("userEmail", email);
+        // Redirect based on role
+        if (role === "admin") {
+            window.location.href = "admin.html";
+        } else if (role === "user") {
+            window.location.href = "user.html";
+        }
+    });
+}

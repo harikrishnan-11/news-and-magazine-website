@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
     <link rel="stylesheet" href="admin.css">
-    
+
 </head>
 
 <body>
@@ -27,55 +27,55 @@
             </div>
 
             <div class="nav-section">
-    <div class="nav-label">My Account</div>
+                <div class="nav-label">My Account</div>
 
-    <a class="nav-item active" href="#" onclick="setPage('overview',this)">
-        <i class="ti ti-layout-dashboard"></i> Dashboard
-    </a>
+                <a class="nav-item active" href="#" onclick="setPage('overview',this)">
+                    <i class="ti ti-layout-dashboard"></i> Dashboard
+                </a>
 
-    <a class="nav-item" href="#" onclick="setPage('profile',this)">
-        <i class="ti ti-user"></i> My Profile
-    </a>
+                <a class="nav-item" href="#" onclick="setPage('profile',this)">
+                    <i class="ti ti-user"></i> My Profile
+                </a>
 
-    <a class="nav-item" href="#" onclick="setPage('bookmarks',this)">
-        <i class="ti ti-bookmark"></i> Saved Articles
-        <span class="nav-badge">24</span>
-    </a>
+                <a class="nav-item" href="#" onclick="setPage('bookmarks',this)">
+                    <i class="ti ti-bookmark"></i> Saved Articles
+                    <span class="nav-badge">24</span>
+                </a>
 
-    <a class="nav-item" href="#" onclick="setPage('history',this)">
-        <i class="ti ti-history"></i> Reading History
-    </a>
-</div>
+                <a class="nav-item" href="#" onclick="setPage('history',this)">
+                    <i class="ti ti-history"></i> Reading History
+                </a>
+            </div>
 
-<div class="nav-section">
-    <div class="nav-label">News</div>
+            <div class="nav-section">
+                <div class="nav-label">News</div>
 
-    <a class="nav-item" href="#" onclick="setPage('recommended',this)">
-        <i class="ti ti-stars"></i> Recommended
-    </a>
+                <a class="nav-item" href="#" onclick="setPage('recommended',this)">
+                    <i class="ti ti-stars"></i> Recommended
+                </a>
 
-    <a class="nav-item" href="#" onclick="setPage('trending',this)">
-        <i class="ti ti-trending-up"></i> Trending News
-    </a>
+                <a class="nav-item" href="#" onclick="setPage('trending',this)">
+                    <i class="ti ti-trending-up"></i> Trending News
+                </a>
 
-    <a class="nav-item" href="#" onclick="setPage('newsletter',this)">
-        <i class="ti ti-mail"></i> Newsletter
-    </a>
-</div>
+                <a class="nav-item" href="#" onclick="setPage('newsletter',this)">
+                    <i class="ti ti-mail"></i> Newsletter
+                </a>
+            </div>
 
-<div class="nav-section">
-    <div class="nav-label">Settings</div>
+            <div class="nav-section">
+                <div class="nav-label">Settings</div>
 
-    <a class="nav-item" href="#" onclick="setPage('settings',this)">
-        <i class="ti ti-settings"></i> Account Settings
-    </a>
+                <a class="nav-item" href="#" onclick="setPage('settings',this)">
+                    <i class="ti ti-settings"></i> Account Settings
+                </a>
 
-    <a class="nav-item" href="#" onclick="setPage('security',this)">
-        <i class="ti ti-shield-lock"></i> Security
-    </a>
-</div>
+                <a class="nav-item" href="#" onclick="setPage('security',this)">
+                    <i class="ti ti-shield-lock"></i> Security
+                </a>
+            </div>
 
-            
+
         </div>
     </aside>
 
@@ -88,8 +88,8 @@
             <span class="page-title" id="pageTitle">User Dashboard</span>
             <div class="topbar-spacer"></div>
             <div class="search-box">
-                <i >USER:</i>
-                <P>EMAIL@DOMAIN.COM </P>
+                <i>USER:</i>
+                <P id="userEmail">EMAIL@DOMAIN.COM </P>
             </div>
             <div class="topbar-actions">
                 <button class="icon-btn" title="Notifications">
@@ -121,8 +121,8 @@
                         </div>
                         <div class="stat-body">
                             <div class="stat-label">Articles Read</div>
-<div class="stat-value">248</div>
-<div class="stat-delta up">+12 this week</div>
+                            <div class="stat-value">248</div>
+                            <div class="stat-delta up">+12 this week</div>
                         </div>
                     </div>
                     <div class="stat-card fade-up delay-2">
@@ -130,16 +130,16 @@
                         </div>
                         <div class="stat-body">
                             <div class="stat-label">Saved Articles</div>
-<div class="stat-value">24</div>
-<div class="stat-delta up">+3 today</div>
+                            <div class="stat-value">24</div>
+                            <div class="stat-delta up">+3 today</div>
                         </div>
                     </div>
                     <div class="stat-card fade-up delay-3">
                         <div class="stat-icon" style="background:#eff6ff;color:#1d4ed8;"><i class="ti ti-eye"></i></div>
                         <div class="stat-body">
                             <div class="stat-label">Reading Time</div>
-<div class="stat-value">42h</div>
-<div class="stat-delta up">+5h this month</div>
+                            <div class="stat-value">42h</div>
+                            <div class="stat-delta up">+5h this month</div>
                         </div>
                     </div>
                     <div class="stat-card fade-up delay-4">
@@ -147,8 +147,8 @@
                         </div>
                         <div class="stat-body">
                             <div class="stat-label">Comments Posted</div>
-<div class="stat-value">87</div>
-<div class="stat-delta up">+4 today</div>
+                            <div class="stat-value">87</div>
+                            <div class="stat-delta up">+4 today</div>
                         </div>
                     </div>
                     <div class="stat-card fade-up delay-5">
@@ -156,8 +156,8 @@
                         </div>
                         <div class="stat-body">
                             <div class="stat-label">Newsletter Subscriptions</div>
-<div class="stat-value">6</div>
-<div class="stat-delta up">Active</div>
+                            <div class="stat-value">6</div>
+                            <div class="stat-delta up">Active</div>
                         </div>
                     </div>
                     <div class="stat-card fade-up delay-6">
@@ -165,8 +165,8 @@
                         </div>
                         <div class="stat-body">
                             <div class="stat-label">Achievements</div>
-<div class="stat-value">15</div>
-<div class="stat-delta up">Unlocked</div>
+                            <div class="stat-value">15</div>
+                            <div class="stat-delta up">Unlocked</div>
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                     <div class="panel">
                         <div class="panel-head">
                             <span class="panel-title">Your Reading Activity — Last 7 Days</span>
-                            <a class="panel-action" href="#">View report <i class="ti ti-arrow-right"></i></a>
+                            <a class="panel-action" href="./404.html">View report <i class="ti ti-arrow-right"></i></a>
                         </div>
                         <div class="panel-body">
                             <div class="chart-container" style="height:220px;">
@@ -187,7 +187,7 @@
                     <div class="panel">
                         <div class="panel-head">
                             <span class="panel-title">Reading Interests</span>
-                            <a class="panel-action" href="#">Details <i class="ti ti-arrow-right"></i></a>
+                            <a class="panel-action" href="./404.html">Details <i class="ti ti-arrow-right"></i></a>
                         </div>
                         <div class="panel-body">
                             <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
@@ -231,7 +231,7 @@
                     <div class="panel">
                         <div class="panel-head">
                             <span class="panel-title">Recently Read Articles</span>
-                            <a class="panel-action" href="#">Manage <i class="ti ti-arrow-right"></i></a>
+                            <a class="panel-action" href="./404.html">Manage <i class="ti ti-arrow-right"></i></a>
                         </div>
                         <div class="tbl-wrap">
                             <table>
@@ -346,41 +346,41 @@
                             <div class="panel-body">
                                 <div class="qa-grid">
                                     <button class="qa-btn">
-    <i class="ti ti-bookmark"></i>
-    Saved Articles
-</button>
+                                        <i class="ti ti-bookmark"></i>
+                                        Saved Articles
+                                    </button>
 
-<button class="qa-btn">
-    <i class="ti ti-history"></i>
-    Reading History
-</button>
+                                    <button class="qa-btn">
+                                        <i class="ti ti-history"></i>
+                                        Reading History
+                                    </button>
 
-<button class="qa-btn">
-    <i class="ti ti-mail"></i>
-    Newsletter
-</button>
+                                    <button class="qa-btn">
+                                        <i class="ti ti-mail"></i>
+                                        Newsletter
+                                    </button>
 
-<button class="qa-btn">
-    <i class="ti ti-user"></i>
-    Edit Profile
-</button>
+                                    <button class="qa-btn">
+                                        <i class="ti ti-user"></i>
+                                        Edit Profile
+                                    </button>
 
-<button class="qa-btn">
-    <i class="ti ti-heart"></i>
-    Favorites
-</button>
+                                    <button class="qa-btn">
+                                        <i class="ti ti-heart"></i>
+                                        Favorites
+                                    </button>
 
-<button class="qa-btn">
-    <i class="ti ti-settings"></i>
-    Settings
-</button>
+                                    <button class="qa-btn">
+                                        <i class="ti ti-settings"></i>
+                                        Settings
+                                    </button>
                                 </div>
                             </div>
                         </div>
                         <div class="panel">
                             <div class="panel-head">
                                 <span class="panel-title">Your Favorite Categories</span>
-                                <a class="panel-action" href="#">All <i class="ti ti-arrow-right"></i></a>
+                                <a class="panel-action" href="./404.html">All <i class="ti ti-arrow-right"></i></a>
                             </div>
                             <div class="panel-body">
                                 <div class="prog-row">
@@ -426,7 +426,7 @@
                         <div class="panel">
                             <div class="panel-head">
                                 <span class="panel-title">My Recent Comments</span>
-                                <a class="panel-action" href="#">View all <i class="ti ti-arrow-right"></i></a>
+                                <a class="panel-action" href="./404.html">View all <i class="ti ti-arrow-right"></i></a>
                             </div>
                             <div class="panel-body" style="padding:8px 22px;">
                                 <div class="comment-item">
@@ -468,18 +468,17 @@
                         </div>
 
                         <div class="panel">
-    <div class="panel-head">
-        <span class="panel-title">Account Information</span>
-    </div>
+                            <div class="panel-head">
+                                <span class="panel-title">Account Information</span>
+                            </div>
 
-    <div class="panel-body">
-        <p><strong>Name:</strong> Hari Krishnan</p>
-        <p><strong>Email:</strong> hari@example.com</p>
-        <p><strong>Member Since:</strong> January 2026</p>
-        <p><strong>Subscription:</strong> Premium</p>
-        <p><strong>Status:</strong> Active</p>
-    </div>
-</div>
+                            <div class="panel-body">
+                                <p><strong>Role:</strong>User</p>
+                                <p><strong>Member Since:</strong> January 2026</p>
+                                <p><strong>Subscription:</strong> Premium</p>
+                                <p><strong>Status:</strong> Active</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -770,7 +769,7 @@
                                 <div class="form-group">
                                     <label class="form-label">Audience</label>
                                     <select class="form-select">
-                                        <option>All Subscribers (42,100)</option>
+                                        
                                         <option>Premium Members</option>
                                         <option>Tech Category</option>
                                         <option>Politics Category</option>
@@ -928,6 +927,12 @@
     </div><!-- end main -->
 
     <script>
+
+         
+document.getElementById("userEmail").textContent =
+    localStorage.getItem("userEmail") || "";
+
+
         // ===================== HAMBURGER =====================
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
