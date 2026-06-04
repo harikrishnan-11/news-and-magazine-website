@@ -54,12 +54,15 @@
         padding: 0;
         box-sizing: border-box;
     }
+
     /* Example styling for your active navigation link */
     .nav-link.active {
-        color: var(--red); /* Or your primary accent color */
+        color: var(--red);
+        /* Or your primary accent color */
         border-bottom: 2px solid var(--red);
         font-weight: 700;
     }
+
     html {
         scroll-behavior: smooth;
     }
@@ -71,8 +74,12 @@
         font-size: 16px;
         line-height: 1.6;
         transition: background var(--transition), color var(--transition);
-    }
 
+      
+    }.hero-btns {
+    position: relative;
+    z-index: 20;
+}
     a {
         text-decoration: none;
         color: inherit;
@@ -181,7 +188,8 @@
     .ticker-track:hover {
         animation-play-state: paused;
     }
-    .ticker-dot{
+
+    .ticker-dot {
         color: red;
     }
 
@@ -250,10 +258,12 @@
         padding: 16px 0;
         gap: 14px;
     }
-    .logo{
+
+    .logo {
         width: 180px;
         height: 60px;
     }
+
     /* Logo */
     .logo img {
         width: 100%;
@@ -266,14 +276,15 @@
     }
 
     .logo p {
-       display: none;
+        display: none;
     }
+
     .login-btn button {
         background: var(--red);
-        color:white;
-        padding:20%;
-        border-radius:3px;
-        font-weight:600;
+        color: white;
+        padding: 20%;
+        border-radius: 3px;
+        font-weight: 600;
         margin-right: 5px;
     }
 
@@ -617,7 +628,13 @@
         background: var(--red);
         color: #fff;
     }
+.btn-primary {
+    cursor: pointer;
+}
 
+.btn-outline {
+    cursor: pointer;
+}
     .btn-outline {
         border: 1.5px solid rgba(255, 255, 255, 0.5);
         color: #fff;
@@ -1007,12 +1024,13 @@
         position: sticky;
         top: 80px;
     }
+
     .sticky-header .section-header {
-        position:sticky;
-        top:80px;
-        background:var(--bg);
-        z-index:500;
-        padding-top:16px;
+        position: sticky;
+        top: 80px;
+        background: var(--bg);
+        z-index: 500;
+        padding-top: 16px;
     }
 
     .home-sidebar h3 {
@@ -1542,11 +1560,12 @@
         height: 60px;
         margin-bottom: 10px;
     }
-        .footer-logo img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+
+    .footer-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
     .footer-brand h2 span {
         color: var(--red);
@@ -1721,10 +1740,11 @@
     RESPONSIVE
     ============================================================ */
     @media (max-width: 1100px) {
-.header-inner {
-        
-        gap: 5px;
-    }
+        .header-inner {
+
+            gap: 5px;
+        }
+
         .hero-container {
             grid-template-columns: 1fr 280px;
         }
@@ -1762,12 +1782,14 @@
             flex-direction: row;
         }
     }
+
     @media (max-width: 960px) {
-         .logo{
-        width: 160px;
-        height: 60px;
+        .logo {
+            width: 160px;
+            height: 60px;
+        }
     }
-    }
+
     @media (max-width: 860px) {
         .hero-container {
             grid-template-columns: 1fr;
@@ -1815,22 +1837,22 @@
             grid-template-columns: 1fr;
             gap: 28px;
         }
-        
+
         .sticky-header .section-header {
-        position:sticky;
-        top:70px;
-        background:var(--bg);
-        z-index:500;
-        padding-top:16px;
-    }
+            position: sticky;
+            top: 70px;
+            background: var(--bg);
+            z-index: 500;
+            padding-top: 16px;
+        }
 
     }
 
     @media (max-width: 560px) {
-       .logo{
-        width: 130px;
-        height: 60px;
-    }
+        .logo {
+            width: 130px;
+            height: 60px;
+        }
 
         .cards-grid-4,
         .cards-grid-3,
@@ -1841,12 +1863,13 @@
         .hero-content {
             padding: 30px 20px;
         }
-        .hero-container{
+
+        .hero-container {
             bottom: 20px;
         }
 
         .hero-controls {
-        left: 48px;
+            left: 48px;
         }
 
         .market-cards {
@@ -1860,29 +1883,32 @@
         .lifestyle-hero {
             height: 260px;
         }
+
         .sticky-header .section-header {
-        position:sticky;
-        top:70px;
-        background:var(--bg);
-        z-index:500;
-        padding-top:16px;
-    }
-    .logo p {
-        font-family: var(--font-display);
-        font-size: 10px;
-        letter-spacing: 4.5px;
-        color: RED;
-        font-weight: 600;
-        margin-top: 2px;
-    margin-right: 20px;
-    }
+            position: sticky;
+            top: 70px;
+            background: var(--bg);
+            z-index: 500;
+            padding-top: 16px;
+        }
+
+        .logo p {
+            font-family: var(--font-display);
+            font-size: 10px;
+            letter-spacing: 4.5px;
+            color: RED;
+            font-weight: 600;
+            margin-top: 2px;
+            margin-right: 20px;
+        }
 
     }
+
     @media (max-width: 320px) {
-       .logo{
-        width: 130px;
-        height: 60px;
-    }
+        .logo {
+            width: 130px;
+            height: 60px;
+        }
     }
 
 
@@ -1900,60 +1926,91 @@
         background: var(--red);
         border-radius: 10px;
     }
-/* Desktop View */
-@media (min-width: 1014px) {
-    .main-nav {
-        display: block;
+
+    /* Desktop View */
+    @media (min-width: 1014px) {
+        .main-nav {
+            display: block;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .mobile-nav {
+            display: none !important;
+        }
     }
 
-    #menu-toggle {
-        display: none;
+    /* Mobile & Tablet View */
+    @media (max-width: 1013px) {
+        .main-nav {
+            display: none;
+        }
+
+        #menu-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-nav.open {
+            max-height: 600px;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            text-decoration: none;
+            color: #222;
+        }
     }
 
-    .mobile-nav {
-        display: none !important;
-    }
-}
-
-/* Mobile & Tablet View */
-@media (max-width: 1013px) {
-    .main-nav {
-        display: none;
-    }
-
-    #menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mobile-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        max-height: 0;
+    body.menu-open {
         overflow: hidden;
-        transition: max-height 0.3s ease;
-        z-index: 999;
     }
 
-    .mobile-nav.open {
-        max-height: 600px;
+    @media (max-width: 1013px) {
+        .mobile-nav {
+            position: fixed;
+            top: 139px;
+            /* adjust to your header height */
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 93px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            background: var(--header-bg);
+            z-index: 999;
+        }
+
+        .mobile-nav ul {
+            padding-bottom: 50px;
+        }
     }
 
-    .mobile-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+    @media (max-width: 560px) {
+        .mobile-nav {
+            top: 129px;
+        }
 
-    .mobile-nav ul li a {
-        display: block;
-        padding: 15px 20px;
-        border-bottom: 1px solid #eee;
-        text-decoration: none;
-        color: #222;
     }
-}

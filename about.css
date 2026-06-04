@@ -84,7 +84,7 @@
 .about-hero {
     position: relative;
     background-color: var(--black);
-    background-image: url(''); 
+    background-image: url('./src/photo-1451187580459-43490279c0fa-compressed.webp'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -101,7 +101,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.75));
+    background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.5));
     z-index: 1;
 }
 
