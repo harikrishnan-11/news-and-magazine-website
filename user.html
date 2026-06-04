@@ -25,7 +25,9 @@
                 <div class="brand-logo"><img src="./src/logo/Untitled design (20)-compressed.webp" alt=""></div>
                 <div class="brand-tag">Admin Panel</div>
             </div>
-
+            <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">
+                <i class="ti ti-x"></i>
+            </button>   
             <div class="nav-section">
                 <div class="nav-label">My Account</div>
 
@@ -769,7 +771,7 @@
                                 <div class="form-group">
                                     <label class="form-label">Audience</label>
                                     <select class="form-select">
-                                        
+
                                         <option>Premium Members</option>
                                         <option>Tech Category</option>
                                         <option>Politics Category</option>
@@ -928,9 +930,9 @@
 
     <script>
 
-         
-document.getElementById("userEmail").textContent =
-    localStorage.getItem("userEmail") || "";
+
+        document.getElementById("userEmail").textContent =
+            localStorage.getItem("userEmail") || "";
 
 
         // ===================== HAMBURGER =====================
@@ -1100,6 +1102,10 @@ document.getElementById("userEmail").textContent =
                 }
             });
         }
+        document.getElementById('sidebarClose').addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        });
     </script>
 </body>
 

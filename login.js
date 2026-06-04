@@ -5,7 +5,7 @@ const passwordInput = document.getElementById("password");
 const emailInput = document.getElementById("email");
 
 // Load saved email when page opens
-window.addEventListener("DOMContentLoaded", () => {
+/* window.addEventListener("DOMContentLoaded", () => {
     const savedEmail = localStorage.getItem("userEmail");
 
     // Prevent [object HTMLInputElement] from appearing
@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     } else {
         localStorage.removeItem("userEmail");
     }
-});
+}); */
 
 // Show / Hide Password
 if (togglePassword) {
